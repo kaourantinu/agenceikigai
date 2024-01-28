@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Metadata } from "next";
 import styles from "./page.module.css";
 import Section from "./components/Section";
 import H1 from "./components/H1";
@@ -8,6 +9,28 @@ import DecorativeRound from "./components/DecorativeRound";
 import H2 from "./components/H2";
 import Span from "./components/Span";
 import H3 from "./components/H3";
+
+export const metadata: Metadata = {
+  title: "ikigai : Agence web et digitale à Besançon - Création de site internet",
+  description: "Agence web à Besançon, nous aidons les entreprises et les indépendants à se rendre visible sur Internet grâce à des sites internet optimisés.",
+  keywords: "agence web, besançon, création de site internet",
+  authors: [
+    {name: "Corentin Tournier", url: "https://ikigaifreelance.com/developpeur-web-freelance"},
+    {name: "Agence ikigai", url: "https://ikigaifreelance.com"}
+  ],
+  publisher: "Agence ikigai",
+  alternates: { 
+    canonical: "https://ikigaifreelance.com" 
+  },
+  openGraph: {
+    type: "website",
+    url: "https://ikigaifreelance.com",
+    title: "ikigai : Agence web et digitale à Besançon - Création de site internet",
+    description: "Agence web à Besançon, nous aidons les entreprises et les indépendants à se rendre visible sur Internet grâce à des sites internet optimisés.",
+    siteName: "ikigai : Agence web et digitale à Besançon - Création de site internet",
+  },
+  robots: "index, follow"
+};
 
 export default function Home() {
   return (
