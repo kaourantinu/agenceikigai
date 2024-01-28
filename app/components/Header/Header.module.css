@@ -1,0 +1,35 @@
+#header{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    width: -moz-stretch;
+    width: -webkit-stretch;
+    width: stretch;
+    margin: 7vh 4.5vw 0vh 4.5vw;
+}
+
+#logocontainer svg{
+    width: 35%;
+    fill: var(--white);
+}
+
+#menucontainer{
+    text-align: center;
+}
+
+#buttoncontainer{
+    text-align: end;
+}
+
+#navbar{
+    color: var(--white);
+    display: flex;
+    list-style-type: none;
+}
+
+.headersidecontainer{
+    width: 25%;
+}
