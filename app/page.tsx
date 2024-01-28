@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Agence web à Besançon, nous aidons les entreprises et les indépendants à se rendre visible sur Internet grâce à des sites internet optimisés.",
     siteName: "ikigai : Agence web et digitale à Besançon - Création de site internet",
   },
-  robots: "index, follow"
+  robots: { index: false, follow: false }
 };
 
 export default function Home() {
