@@ -104,11 +104,11 @@ export default function Home() {
         <H2>Ce que nos clients ont pensé de leur projet</H2>
         <Div>
           <H3>Cindy Giancarlo - Photographe indépendante</H3>
-          <P>L'agence Ikigai Freelance a réalisé le site internet de mon entreprise de photographie.<br></br>
-          <br></br>Nous avons étudié ensemble mon projet et Corentin a pris le temps de bien comprendre quels étaient les enjeux de ma démarche. À l'écoute, il m'a conseillé et a toujours répondu à mes questions.
+          <P>L&apos;agence Ikigai Freelance a réalisé le site internet de mon entreprise de photographie.<br></br>
+          <br></br>Nous avons étudié ensemble mon projet et Corentin a pris le temps de bien comprendre quels étaient les enjeux de ma démarche. À l&apos;écoute, il m&apos;a conseillé et a toujours répondu à mes questions.
           <br></br>Il a su apporter des solutions pertinentes aux difficultés que comprenait mon cahier des charges.
-          <br></br>Régulièrement, il m'invitait à valider l'avancée du projet. Ainsi, nous avions un échange établi tout au long de notre collaboration.
-          <br></br><br></br>Corentin est quelqu'un de professionnel, disponible et réactif. Le travail est réalisé avec soin dans le respect des volontés du client.
+          <br></br>Régulièrement, il m&apos;invitait à valider l&apos;avancée du projet. Ainsi, nous avions un échange établi tout au long de notre collaboration.
+          <br></br><br></br>Corentin est quelqu&apos;un de professionnel, disponible et réactif. Le travail est réalisé avec soin dans le respect des volontés du client.
           <br></br><br></br>Très satisfaite, je recommande vivement Ikigai Freelance !</P>
         </Div>
       </Section>
