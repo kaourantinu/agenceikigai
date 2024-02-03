@@ -1,0 +1,32 @@
+.question{
+    width: 80%;
+    background-color: var(--white);
+    padding: 3%;
+    border-radius: var(--borderradius);
+}
+
+.question h3{
+    font-size: 1.3rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.question:not(:last-child){
+    margin-bottom: 3vh;
+}
+
+.question input[type="checkbox"] {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.answer{
+    display: none;
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.question input[type="checkbox"]:checked ~ .answer {
+    display: block;
+}
