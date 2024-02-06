@@ -20,6 +20,23 @@ import Question from "../components/Question/Question";
 export const metadata: Metadata = {
     title: "Corentin Tournier - Développeur web freelance à Besançon",
     description: "Développeur web freelance et spécialisé dans le référencement naturel (SEO), j'aide les entreprises et les indépendants à se rendre visible sur Internet.",
+    keywords: "développeur web freelance, besançon, création de site internet",
+    authors: [
+        {name: "Corentin Tournier", url: "https://ikigaifreelance.com/developpeur-web-freelance"},
+        {name: "Agence ikigai", url: "https://ikigaifreelance.com"}
+    ],
+    publisher: "Agence ikigai",
+    alternates: { 
+        canonical: "https://ikigaifreelance.com/developpeur-web-freelance" 
+    },
+    openGraph: {
+        type: "website",
+        url: "https://ikigaifreelance.com/developpeur-web-freelance",
+        title: "Corentin Tournier - Développeur web freelance à Besançon",
+        description: "Développeur web freelance et spécialisé dans le référencement naturel (SEO), j'aide les entreprises et les indépendants à se rendre visible sur Internet.",
+        siteName: "ikigai : Agence web à Besançon - Création de site internet",
+    },
+    robots: { index: false, follow: false }
   };
 
 export default function Page(){
