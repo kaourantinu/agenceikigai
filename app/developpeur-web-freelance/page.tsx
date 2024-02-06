@@ -57,7 +57,7 @@ export default function Page(){
             </Section>
             <Section id={styles.realisationssection}>
                 <Div id={styles.realisationsdiv}>
-                <H2>Nos réalisations</H2>
+                <H2>Mes réalisations</H2>
                 <Div id={styles.realisationsgrid}>
                     <Div id={styles.realisation1}>
                     <H3>Le Comptoir des Bières - École-Valentin</H3>
@@ -97,7 +97,7 @@ export default function Page(){
             <Section id={styles.vertuespresentationsection}>
                 <Div id={styles.vertuespresentation}>
                     <Div id={styles.vertues}>
-                        <H2>Les valeurs de<Span color="var(--orange)"> notre agence.</Span></H2>
+                        <H2>Mes valeurs en tant que<Span color="var(--orange)"> développeur web freelance</Span>.</H2>
                         <P>Basé dans le Doubs en Bourgogne Franche-Comté, il me tient à cœur de répondre au mieux aux attentes de mes clients et de participer au fonctionnement de l&apos;écosystème économique local.</P>
                         <H3>Une seule mission : votre visibilité</H3>
                         <P>De nos jours, obtenir de nouvelles opportunités commerciales est devenu un vrai défi pour la plupart des entreprises. Une bonne visibilité sur Google est l&apos;un des moyens de relever ce défi.</P>
