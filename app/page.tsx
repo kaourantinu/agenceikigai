@@ -10,6 +10,7 @@ import DecorativeRound from "./components/DecorativeRound";
 import H2 from "./components/H2";
 import Span from "./components/Span";
 import H3 from "./components/H3";
+import H4 from "./components/H4";
 import List from "./components/List";
 import ListElement from "./components/ListElement";
 import LinkButton from "./components/LinkButton";
@@ -45,7 +46,7 @@ export default function Home() {
       <Section id={styles.herosection}>
         <H1>Agence web à Besançon</H1>
         <P id={styles.heroquote}>Nous vous rendons visible<br></br> sur Internet</P>
-        <P id={styles.herodescription}>Se rendre visible sur Internet ne devrait pas être si difficile...<br></br> Alors notre agence web basée à Besançon le fait pour vous !</P>
+        <P id={styles.herodescription}>Se rendre visible sur Internet ne devrait pas être si difficile...<br></br> Alors l'agence web ikigai basée à Besançon le fait pour vous !</P>
         <DecorativeRound id={styles.decorativeround}/>
       </Section>
       <Section id={styles.presentationsection}>
@@ -78,15 +79,15 @@ export default function Home() {
           <Div id={styles.vertuespresentation}>
             <Div id={styles.vertues}>
               <H2>Les valeurs de<Span color="var(--orange)"> notre agence.</Span></H2>
-              <P>Basée dans le Doubs en Bourgogne Franche-Comté, notre agence a à cœur de répondre au mieux aux attentes de ses clients et de participer au fonctionnement de l&apos;écosystème économique local.</P>
+              <P>Basée dans le Doubs en Bourgogne Franche-Comté, l'agence a à cœur de répondre au mieux aux attentes de ses clients et de participer au fonctionnement de l&apos;écosystème économique local.</P>
               <H3>Une seule mission : vous rendre visible sur Internet</H3>
               <P>De nos jours, obtenir de nouveaux clients est devenu un vrai défi pour la plupart des entreprises. Se rendre visible sur Google est l&apos;un des moyens de relever ce défi.</P>
               <H3>Quelque soit votre statut ou votre localisation</H3>
-              <P>Que vous soyez une entreprise, un indépendant ou une association, notre agence vous accompagne dans votre stratégie de présence en ligne et cela, peu importe où vous vous situez.</P>
+              <P>Que vous soyez une entreprise, un indépendant ou une association, l'agence vous accompagne dans la mise en place d'une stratégie de présence en ligne et cela, peu importe où vous vous situez.</P>
               <H3>Avec des prestations sur-mesure</H3>
-              <P>Nous adaptons votre prestation aux besoins que nous définissons ensemble pendant notre premier rendez-vous.</P>
+              <P>Nous adaptons votre prestation aux besoins que nous définissons ensemble pendant un premier rendez-vous.</P>
               <H3>Et un seul interlocuteur</H3>
-              <P>Puisque l&apos;agence ikigai n&apos;est gérée que par une seule personne indépendante sans aucune équipe, fini les problèmes de communication ! Vous ne communiquez qu&apos;avec une seule personne durant tout le projet.</P>
+              <P>Puisque l&apos;agence ikigai n&apos;est gérée que par une seule personne indépendante sans aucune équipe, fini les problèmes de communication ! Vous ne communiquez qu&apos;avec une seule personne durant tout le temps de création d'un site web.</P>
             </Div>
             <Link href='/developpeur-web-freelance' title='Développeur web freelance à Besançon' id={styles.freelancepresentation}>
               <H3>Corentin Tournier</H3>
@@ -102,70 +103,69 @@ export default function Home() {
       </Section>
       <Section id={styles.reviewsection}>
         <H2>Ce que nos clients ont pensé de leur projet</H2>
-        <Div>
-          <H3>Cindy Giancarlo - Photographe indépendante</H3>
-          <P>L&apos;agence Ikigai Freelance a réalisé le site internet de mon entreprise de photographie.<br></br>
+        <Div id={styles.review}>
+          <Div id={styles.reviewinfo}>
+            <Div id={styles.reviewimage}>
+              <Image src='/cindy-giancarlo-photographe-independante.jpg' width={500} height={500} alt="Cindy Giancarlo, photographe indépendante pour qui nous avons créé un site web vitrine" title="Cindy Giancarlo, photographe indépendante pour qui nous avons créé un site web vitrine"></Image>
+            </Div>
+            <Div id={styles.reviewtextinfo}>
+              <H3>Cindy Giancarlo</H3>
+              <H4>Photographe indépendante</H4>
+            </Div>
+          </Div>
+          <P>L&apos;agence ikigai a réalisé le site internet de mon entreprise de photographie.<br></br>
           <br></br>Nous avons étudié ensemble mon projet et Corentin a pris le temps de bien comprendre quels étaient les enjeux de ma démarche. À l&apos;écoute, il m&apos;a conseillé et a toujours répondu à mes questions.
           <br></br>Il a su apporter des solutions pertinentes aux difficultés que comprenait mon cahier des charges.
-          <br></br>Régulièrement, il m&apos;invitait à valider l&apos;avancée du projet. Ainsi, nous avions un échange établi tout au long de notre collaboration.
+          <br></br>Régulièrement, il m&apos;invitait à valider l&apos;avancée de la création du site. Ainsi, nous avions un échange établi tout au long de notre collaboration.
           <br></br><br></br>Corentin est quelqu&apos;un de professionnel, disponible et réactif. Le travail est réalisé avec soin dans le respect des volontés du client.
-          <br></br><br></br>Très satisfaite, je recommande vivement Ikigai Freelance !</P>
+          <br></br><br></br>Très satisfaite, je recommande vivement l'agence ikigai !</P>
         </Div>
       </Section>
       <Section id={styles.pricesection}>
         <H2>Nos tarifs.</H2>
-        <Div id={styles.offers}>
-          <Div className={styles.offer}>
-            <H3>Site web vitrine</H3>
-            <P className={styles.offerprice}>À partir de<br></br> <Span color="var(--orange)"><b>999€</b></Span></P>
-            <List>
-              <ListElement>Développement avec WordPress & Elementor ou avec NextJS (React)</ListElement>
-              <ListElement>Optimisation du référencement pour les moteurs de recherches sur le mot-clé désiré</ListElement>
-              <ListElement>Webdesign unique</ListElement>
-              <ListElement>Responsive design (adapté aux écrans mobiles)</ListElement>
-              <ListElement>Hébergement et nom de domaine offert pendant 12 mois</ListElement>
-            </List>
-          </Div>
-          <Div className={styles.offer}>
-            <H3>Site web e-commerce</H3>
-            <P className={styles.offerprice}>À partir de<br></br> <Span color="var(--orange)"><b>1999€</b></Span></P>
-            <List>
-              <ListElement>Développement avec WordPress, Elementor & WooCommerce ou avec NextJS (React)</ListElement>
-              <ListElement>Optimisation du référencement pour les moteurs de recherches sur le mot-clé désiré</ListElement>
-              <ListElement>Webdesign unique</ListElement>
-              <ListElement>Responsive design (adapté aux écrans mobiles)</ListElement>
-              <ListElement>Hébergement et nom de domaine offert pendant 12 mois</ListElement>
-            </List>
-          </Div>
-          <Div className={styles.offer}>
-            <H3>Application Web sur-mesure</H3>
-            <P className={styles.offerprice}>À partir de<br></br> <Span color="var(--orange)"><b>4999€</b></Span></P>
-            <List>
-              <ListElement>Développement avec NextJS (React)</ListElement>
-              <ListElement>Optimisation du référencement pour les moteurs de recherches sur le mot-clé désiré</ListElement>
-              <ListElement>Webdesign unique</ListElement>
-              <ListElement>Responsive design (adapté aux écrans mobiles)</ListElement>
-              <ListElement>Hébergement et nom de domaine offert pendant 12 mois</ListElement>
-            </List>
-          </Div>
-        </Div>
-        <Div id={styles.formationoffers}>
-          <H3>Formations numériques</H3>
-          <Div id={styles.formationduo}>
-            <List>
-              <ListElement>Création de site vitrine avec WordPress & Elementor</ListElement>
-              <ListElement>Création de site e-commerce avec WordPress, Elementor & WooCommerce</ListElement>
-              <ListElement>Référencement naturel (SEO)</ListElement>
-            </List>
-            <Div>
-              <P>Formations certifiées Qualiopi & finançables OPCO et Pôle Emploi</P>
+          <Div id={styles.offers}>
+            <Div id={styles.weboffer}>
+              <H3>Développement web</H3>
+                <Div id={styles.weboffercontainer}>
+                  <Div className={styles.webpriceoffer}>
+                    <H4>Site web vitrine</H4>
+                    <P className={styles.offerprice}>À partir de<br></br> <Span color="var(--orange)"><b>999€</b></Span></P>
+                  </Div>
+                  <Div className={styles.webpriceoffer}>
+                    <H4>Site web e-commerce</H4>
+                    <P className={styles.offerprice}>À partir de<br></br> <Span color="var(--orange)"><b>1999€</b></Span></P>
+                  </Div>
+                  <Div className={styles.webpriceoffer}>
+                    <H4>Application Web sur-mesure</H4>
+                    <P className={styles.offerprice}>À partir de<br></br> <Span color="var(--orange)"><b>4999€</b></Span></P>
+                  </Div>
+                </Div>
+                <H4>Caractéristiques de nos sites web</H4>
+                <List>
+                  <ListElement>Développés avec WordPress & Elementor ou avec NextJS (React)</ListElement>
+                  <ListElement>Optimisés pour le référencement pour les moteurs de recherches sur le mot-clé désiré</ListElement>
+                  <ListElement>Uniques au niveau de leur design</ListElement>
+                  <ListElement>Responsives (adapté aux écrans mobiles)</ListElement>
+                  <ListElement>Hébergement et nom de domaine inclus pendant 12 mois</ListElement>
+                </List>
+                <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
+            </Div>
+            <Div id={styles.formationoffers}>
+              <H3>Formations numériques</H3>
+                <List>
+                  <ListElement><H4>Création de site vitrine avec WordPress & Elementor</H4></ListElement>
+                  <ListElement><H4>Création de site e-commerce avec WordPress, Elementor & WooCommerce</H4></ListElement>
+                  <ListElement><H4>Référencement naturel (SEO)</H4></ListElement>
+                </List>
+                <P id={styles.qualiopi}>Formations certifiées Qualiopi & finançables OPCO et Pôle Emploi</P>
+                <Div id={styles.logoformation}>
+                  <Image src='/logo-qualiopi.png' width={501} height={211} alt="Logo Qualiopi, certification attestant de la qualité des prestations proposées par les organismes de formation sur la base du Référentiel National Qualité"/>
+                  <Image src='/logo-datadock.png' width={481} height={519} alt="Logo Certification Datadock, l'outil d'aide au référencement des organismes de formation"/>
+                  <Image src='/logo_moncompteformation.png' width={2647} height={1559} alt="Logo Mon Compte Formation"/>
+                </Div>
+                <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
             </Div>
           </Div>
-        </Div>
-      </Section>
-      <Section id={styles.ctasection}>
-        <H2>Faites appel à nos services</H2>
-        <ContactForm />
       </Section>
       <Section id={styles.faqsection}>
         <H2>Questions fréquentes</H2>

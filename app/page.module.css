@@ -184,7 +184,6 @@
 }
 
 #clientsection{
-    width: 90%;
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -194,13 +193,56 @@
     margin-bottom: 12.5vh;
 }
 
-#reviewsection{
+#clientslider{
+    background-color: var(--white);
     width: 90%;
+}
+
+#reviewsection{
     background-color: transparent;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    column-gap: 5%;
+    padding: 0% 5%;
     margin-bottom: 12.5vh;
+}
+
+#review{
+    background-color: var(--white);
+    border-radius: var(--borderradius);
+    padding: 3%;
+}
+
+#review p{
+    margin-bottom: 0rem;
+}
+
+#reviewinfo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 2%;
+    margin-bottom: 1rem;
+}
+
+#reviewimage{
+    width: 7.5%;
+}
+
+#reviewsection img{
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+#reviewtextinfo h3{
+    margin-bottom: 0.5rem;
+}
+
+#reviewtextinfo h4{
+    font-weight: 500;
+    font-style: italic;
 }
 
 #pricesection{
@@ -216,14 +258,13 @@
 #offers{
     width: 90%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    column-gap: 3%;
-    margin-bottom: 5vh;
 }
 
-.offer{
+#weboffer{
+    width: 47.5%;
     display: flex;
-    flex: 1;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -232,13 +273,27 @@
     padding: 3%;
 }
 
-.offer h3, #formationoffers h3{
+#weboffer h3, #formationoffers h3{
     font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+#weboffercontainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10%;
+    margin-bottom: 2rem;
+}
+
+.weboffer{
+    width: 33%;
 }
 
 .offerprice{
     font-size: 0.75rem;
-    margin: 3rem 0rem;
+    margin: 1rem 0rem;
 }
 
 .offerprice span{
@@ -246,26 +301,22 @@
     line-height: 3rem;
 }
 
-.offer ul{
+#weboffer ul, #formationoffers ul{
     list-style-type: none;
 }
 
-.offer li{
+#weboffer li, #formationoffers li{
     font-weight: 500;
     line-height: 1.75rem;
+    margin-top: 1.5rem;
 }
 
-.offer li::before{
-    content: 'i';
-    margin-right: 10px;
-}
-
-.offer li:not(:last-child){
-    margin-bottom: 1.75rem;
+#weboffer li:last-child{
+    margin-bottom: 2rem;
 }
 
 #formationoffers{
-    width: 90%;
+    width: 47.5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -275,21 +326,24 @@
     padding: 3% 7.5%;
 }
 
-#formationduo{
-    margin-top: 2rem;
-    width: 100%;
+#formationoffers h3{
+    margin-bottom: 0rem;
+}
+
+#qualiopi{
+    margin: 3rem 0rem 1rem 0rem;
+}
+
+#logoformation{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
-#formationduo ul{
-    text-align: start;
-    list-style-type: none;
-}
-
-#formationduo li:not(:last-child){
-    margin-bottom: 1.75rem;
+#logoformation img{
+    width: 20%;
+    height: auto;
 }
 
 #ctasection{
