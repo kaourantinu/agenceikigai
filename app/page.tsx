@@ -46,7 +46,7 @@ export default function Home() {
       <Section id={styles.herosection}>
         <H1>Agence web à Besançon</H1>
         <P id={styles.heroquote}>Nous vous rendons visible<br></br> sur Internet</P>
-        <P id={styles.herodescription}>Se rendre visible sur Internet ne devrait pas être si difficile...<br></br> Alors l'agence web ikigai basée à Besançon le fait pour vous !</P>
+        <P id={styles.herodescription}>Se rendre visible sur Internet ne devrait pas être si difficile...<br></br> Alors l&apos;agence web ikigai basée à Besançon le fait pour vous !</P>
         <DecorativeRound id={styles.decorativeround}/>
       </Section>
       <Section id={styles.presentationsection}>
@@ -79,15 +79,15 @@ export default function Home() {
           <Div id={styles.vertuespresentation}>
             <Div id={styles.vertues}>
               <H2>Les valeurs de<Span color="var(--orange)"> notre agence.</Span></H2>
-              <P>Basée dans le Doubs en Bourgogne Franche-Comté, l'agence a à cœur de répondre au mieux aux attentes de ses clients et de participer au fonctionnement de l&apos;écosystème économique local.</P>
+              <P>Basée dans le Doubs en Bourgogne Franche-Comté, l&apos;agence a à cœur de répondre au mieux aux attentes de ses clients et de participer au fonctionnement de l&apos;écosystème économique local.</P>
               <H3>Une seule mission : vous rendre visible sur Internet</H3>
               <P>De nos jours, obtenir de nouveaux clients est devenu un vrai défi pour la plupart des entreprises. Se rendre visible sur Google est l&apos;un des moyens de relever ce défi.</P>
               <H3>Quelque soit votre statut ou votre localisation</H3>
-              <P>Que vous soyez une entreprise, un indépendant ou une association, l'agence vous accompagne dans la mise en place d'une stratégie de présence en ligne et cela, peu importe où vous vous situez.</P>
+              <P>Que vous soyez une entreprise, un indépendant ou une association, l&apos;agence vous accompagne dans la mise en place d&apos;une stratégie de présence en ligne et cela, peu importe où vous vous situez.</P>
               <H3>Avec des prestations sur-mesure</H3>
               <P>Nous adaptons votre prestation aux besoins que nous définissons ensemble pendant un premier rendez-vous.</P>
               <H3>Et un seul interlocuteur</H3>
-              <P>Puisque l&apos;agence ikigai n&apos;est gérée que par une seule personne indépendante sans aucune équipe, fini les problèmes de communication ! Vous ne communiquez qu&apos;avec une seule personne durant tout le temps de création d'un site web.</P>
+              <P>Puisque l&apos;agence ikigai n&apos;est gérée que par une seule personne indépendante sans aucune équipe, fini les problèmes de communication ! Vous ne communiquez qu&apos;avec une seule personne durant tout le temps de création d&apos;un site web.</P>
             </Div>
             <Link href='/developpeur-web-freelance' title='Développeur web freelance à Besançon' id={styles.freelancepresentation}>
               <H3>Corentin Tournier</H3>
@@ -118,7 +118,7 @@ export default function Home() {
           <br></br>Il a su apporter des solutions pertinentes aux difficultés que comprenait mon cahier des charges.
           <br></br>Régulièrement, il m&apos;invitait à valider l&apos;avancée de la création du site. Ainsi, nous avions un échange établi tout au long de notre collaboration.
           <br></br><br></br>Corentin est quelqu&apos;un de professionnel, disponible et réactif. Le travail est réalisé avec soin dans le respect des volontés du client.
-          <br></br><br></br>Très satisfaite, je recommande vivement l'agence ikigai !</P>
+          <br></br><br></br>Très satisfaite, je recommande vivement l&apos;agence ikigai !</P>
         </Div>
       </Section>
       <Section id={styles.pricesection}>
