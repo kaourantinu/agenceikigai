@@ -74,6 +74,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    #footer{
+        border-radius: 0px;
+    }
+
     #firstfooter{
         text-align: center;
         align-items: center;

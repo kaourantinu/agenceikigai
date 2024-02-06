@@ -395,8 +395,10 @@
 
 @media screen  and (max-width: 767px) {
     #herosection{
-        height: 65vh;
+        height: 70vh;
         padding: 0rem;
+        border-radius: 0px;
+        margin-bottom: 5rem;
     }
 
     #heroquote{

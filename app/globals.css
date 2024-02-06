@@ -76,6 +76,15 @@ button{
 
 @media screen  and (max-width: 767px) {
   :root{
-    font-size: 12px;
+    font-size: 13px;
+  }
+
+  html,
+  body {
+  margin: 0rem;
+  }
+
+  section:not(.herosectionclass){
+    margin: 0rem 2rem;
   }
 }

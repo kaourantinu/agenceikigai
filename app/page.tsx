@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <main id={styles.main}>
-      <Section id={styles.herosection}>
+      <Section id={styles.herosection} className="herosectionclass">
         <H1>Agence web à Besançon</H1>
         <P id={styles.heroquote}>Nous vous rendons visible sur Internet</P>
         <P id={styles.herodescription}>Se rendre visible sur Internet ne devrait pas être si difficile... Alors l&apos;agence web ikigai basée à Besançon le fait pour vous !</P>
