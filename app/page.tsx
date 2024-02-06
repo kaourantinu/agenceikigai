@@ -11,6 +11,7 @@ import H2 from "./components/H2";
 import Span from "./components/Span";
 import H3 from "./components/H3";
 import H4 from "./components/H4";
+import Strong from "./components/Strong";
 import List from "./components/List";
 import ListElement from "./components/ListElement";
 import LinkButton from "./components/LinkButton";
@@ -44,29 +45,31 @@ export default function Home() {
     <main id={styles.main}>
       <Section id={styles.herosection}>
         <H1>Agence web à Besançon</H1>
-        <P id={styles.heroquote}>Nous vous rendons visible<br></br> sur Internet</P>
-        <P id={styles.herodescription}>Se rendre visible sur Internet ne devrait pas être si difficile...<br></br> Alors l&apos;agence web ikigai basée à Besançon le fait pour vous !</P>
+        <P id={styles.heroquote}>Nous vous rendons visible sur Internet</P>
+        <P id={styles.herodescription}>Se rendre visible sur Internet ne devrait pas être si difficile... Alors l&apos;agence web ikigai basée à Besançon le fait pour vous !</P>
         <DecorativeRound id={styles.decorativeround}/>
       </Section>
       <Section id={styles.presentationsection}>
         <H2><Span color="var(--grey)">Une agence web.</Span><br></br> Plusieurs expertises digitales.</H2>
-        <P>ikigai est une agence web spécialisée dans la création de site web,<br></br> le référencement naturel et la formation dans le but de booster votre communication digitale.</P>
-        <Div id={styles.expertises}>
-          <Link href='/creation-site-internet' title='Création de site internet' className={styles.expertise}>
-            <Image src='/world-wide-web.png' width={128} height={128} alt="icon" title="icon"/>
-            <H3>Création de site internet</H3>
-            <P>L&apos;agence ikigai crée des sites internet sur-mesure grâce au développement web avec le framework NextJS ou grâce à des outils no-code comme WordPress et Elementor.</P>
-          </Link>
-          <Link href='/' title='Référencement naturel (SEO)' className={styles.expertise}>
-            <Image src='/world-wide-web.png' width={128} height={128} alt="icon" title="icon"/>
-            <H3>Référencement naturel (SEO)</H3>
-            <P>L&apos;agence ikigai écrit chaque ligne de code d&apos;un site web en optimisant au maximum sa performance et sa position future dans les résultats de recherche Google afin que vos clients puissent trouver facilement votre marque.</P>
-          </Link>
-          <Link href='/' title='Formateur digital Besançon' className={styles.expertise}>
-            <Image src='/world-wide-web.png' width={128} height={128} alt="icon" title="icon"/>
-            <H3>Formations au digital</H3>
-            <P>L&apos;agence ikigai forme également les personnes désireuses d&apos;apprendre et de développer leur visibilité digitale à la conception de sites internet grâce à des plateformes no-code (site WordPress/Elementor) ainsi qu&apos;au référencement naturel (SEO).</P>
-          </Link>
+        <P>ikigai est une <Strong>agence web spécialisée</Strong> dans la <Strong>création de site web</Strong>, le référencement naturel et la formation dans le but de booster votre <Strong>communication digitale</Strong>.</P>
+        <Div id={styles.expertiseslider}>
+          <Div id={styles.expertises}>
+            <Link href='/creation-site-internet' title='Création de site internet' className={styles.expertise}>
+              <Image src='/world-wide-web.png' width={128} height={128} alt="icon" title="icon"/>
+              <H3>Création de site internet</H3>
+              <P>L&apos;agence ikigai crée des sites internet sur-mesure grâce au <Strong>développement web</Strong> avec le framework NextJS ou grâce à des outils no-code comme WordPress et Elementor.</P>
+            </Link>
+            <Link href='/' title='Référencement naturel (SEO)' className={styles.expertise}>
+              <Image src='/world-wide-web.png' width={128} height={128} alt="icon" title="icon"/>
+              <H3>Référencement naturel (SEO)</H3>
+              <P>L&apos;agence ikigai écrit chaque ligne de code d&apos;un site web en optimisant au maximum sa performance et sa position future dans les résultats de recherche Google afin que vos clients puissent trouver facilement votre marque.</P>
+            </Link>
+            <Link href='/' title='Formateur digital Besançon' className={styles.expertise}>
+              <Image src='/world-wide-web.png' width={128} height={128} alt="icon" title="icon"/>
+              <H3>Formations au digital</H3>
+              <P>L&apos;agence ikigai forme également les personnes désireuses d&apos;apprendre et de développer leur visibilité digitale à la <Strong>conception de sites internet</Strong> grâce à des plateformes no-code (site WordPress/Elementor) ainsi qu&apos;au référencement naturel (SEO).</P>
+            </Link>
+          </Div>
         </Div>
       </Section>
       <Section id={styles.realisationssection}>
@@ -75,31 +78,31 @@ export default function Home() {
           <Div id={styles.realisationsgrid}>
             <Div id={styles.realisation1}>
               <H3>Le Comptoir des Bières - École-Valentin</H3>
-              <Link href='https://lecomptoirdesbieresbesancon.com/' rel="external nofollow">
+              <Link href='https://lecomptoirdesbieresbesancon.com/' rel="external nofollow" target="_blank">
                 <Image src='/site-ecommerce-comptoir.png' alt="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation2}>
               <H3>Le Petit Atelier Photos - Besançon</H3>
-              <Link href='https://lepetitatelierphotos.com/' rel="external nofollow">
+              <Link href='https://lepetitatelierphotos.com/' rel="external nofollow" target="_blank">
                 <Image src='/site-vitrine-lepetitatelierphotos.png' alt="Capture d'écran du site vitrine réalisé par notre agence pour le Petit Atelier Photos" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation3}>
               <H3>Real Estate Agency (Portfolio)</H3>
-              <Link href='https://realestate-theta-eosin.vercel.app/' rel="external nofollow">
+              <Link href='https://realestate-theta-eosin.vercel.app/' rel="external nofollow" target="_blank">
                 <Image src='/site-vitrine-realestate.png' alt="Capture d'écran du site d'annonces immobilières réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation4}>
               <H3>Real Madrid (Portfolio)</H3>
-              <Link href='https://realmadridnextjs.vercel.app/' rel="external nofollow">
+              <Link href='https://realmadridnextjs.vercel.app/' rel="external nofollow" target="_blank">
                 <Image src='/site-vitrine-realmadrid.png' alt="Capture d'écran du site vitrine du Real Madrid réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation5}>
               <H3>Apple (Portfolio)</H3>
-              <Link href='https://appleiphone15pro.vercel.app/' rel="external nofollow">
+              <Link href='https://appleiphone15pro.vercel.app/' rel="external nofollow" target="_blank">
                 <Image src='/configurateur-iphone.png' alt="Capture d'écran du configurateur en ligne iPhone réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
               </Link>
             </Div>
@@ -116,7 +119,7 @@ export default function Home() {
               <H3>Une seule mission : vous rendre visible sur Internet</H3>
               <P>De nos jours, obtenir de nouveaux clients est devenu un vrai défi pour la plupart des entreprises. Se rendre visible sur Google est l&apos;un des moyens de relever ce défi.</P>
               <H3>Quelque soit votre statut ou votre localisation</H3>
-              <P>Que vous soyez une entreprise, un indépendant ou une association, l&apos;agence vous accompagne dans la mise en place d&apos;une stratégie de présence en ligne et cela, peu importe où vous vous situez.</P>
+              <P>Que vous soyez une entreprise, un indépendant ou une association, l&apos;agence vous accompagne dans la <Strong>mise en place</Strong> d&apos;une stratégie de <Strong>présence en ligne</Strong> et cela, peu importe où vous vous situez.</P>
               <H3>Avec des prestations sur-mesure</H3>
               <P>Nous adaptons votre prestation aux besoins que nous définissons ensemble pendant un premier rendez-vous.</P>
               <H3>Et un seul interlocuteur</H3>
@@ -127,12 +130,6 @@ export default function Home() {
               <P>Développeur web freelance gérant l&apos;agence ikigai</P>
             </Link>
           </Div>
-      </Section>
-      <Section id={styles.clientsection}>
-        <H2>Ils nous ont fait confiance</H2>
-        <Div id={styles.clientslider}>
-          
-        </Div>
       </Section>
       <Section id={styles.reviewsection}>
         <H2>Ce que nos clients ont pensé de leur projet</H2>
@@ -173,10 +170,10 @@ export default function Home() {
                     <P className={styles.offerprice}>À partir de<br></br> <Span color="var(--orange)"><b>4999€</b></Span></P>
                   </Div>
                 </Div>
-                <H4>Caractéristiques de nos sites web</H4>
+                <H4>Caractéristiques de nos <Strong>sites web</Strong></H4>
                 <List>
                   <ListElement>Développés avec WordPress & Elementor ou avec NextJS (React)</ListElement>
-                  <ListElement>Optimisés pour le référencement pour les moteurs de recherches sur le mot-clé désiré</ListElement>
+                  <ListElement>Optimisés pour le référencement pour les <Strong>moteurs de recherche</Strong> sur le mot-clé désiré</ListElement>
                   <ListElement>Uniques au niveau de leur design</ListElement>
                   <ListElement>Responsives (adapté aux écrans mobiles)</ListElement>
                   <ListElement>Hébergement et nom de domaine inclus pendant 12 mois</ListElement>
@@ -186,7 +183,7 @@ export default function Home() {
             <Div id={styles.formationoffers}>
               <H3>Formations numériques</H3>
                 <List>
-                  <ListElement><H4>Création de site vitrine avec WordPress & Elementor</H4></ListElement>
+                  <ListElement><H4>Création de <Strong>site vitrine</Strong> avec WordPress & Elementor</H4></ListElement>
                   <ListElement><H4>Création de site e-commerce avec WordPress, Elementor & WooCommerce</H4></ListElement>
                   <ListElement><H4>Référencement naturel (SEO)</H4></ListElement>
                 </List>

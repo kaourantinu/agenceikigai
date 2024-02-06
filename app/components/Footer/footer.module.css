@@ -2,7 +2,7 @@
     color: var(--white);
     background-color: var(--black);
     border-radius: 20px 20px 0px 0px;
-    padding: 4% 5% 3% 5%;
+    padding: 4rem 5rem 3rem 5rem;
 }
 
 #firstfooter{
@@ -70,5 +70,44 @@
 }
 
 #secondfooter li:not(:last-child){
-    margin-right: 5%;
+    margin-right: 5rem;
+}
+
+@media screen and (max-width: 767px) {
+    #firstfooter{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        row-gap: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    #logofootercontainer{
+        width: 100%;
+    }
+
+    #logofootercontainer p{
+        margin-bottom: 0rem;
+    }
+
+    #footermenu{
+        width: 100%;
+    }
+
+    #footercontact{
+        width: 100%;
+    }
+
+    #secondfooter{
+        text-align: center;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #secondfooter ul{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
 }

@@ -8,7 +8,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 12.5vh;
+    margin-bottom: 7rem;
+    padding: 15rem;
 }
 
 #herosection *{
@@ -23,7 +24,7 @@
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    padding: 1% 2%;
+    padding: 1rem 2rem;
     border-radius: 50px;
 }
 
@@ -38,6 +39,7 @@
     font-size: 1.25rem;
     line-height: 2.35rem;
     font-weight: 400;
+    padding: 0rem 10rem;
     margin-bottom: 0rem;
 }
 
@@ -68,11 +70,15 @@
     text-align: center;
 }
 
-#expertises{
+#expertiseslider{
     width: 90%;
+    overflow: hidden;
+}
+
+#expertises{
     display: flex;
     justify-content: space-between;
-    column-gap: 3%;
+    column-gap: 3rem;
 }
 
 .expertise{
@@ -83,18 +89,18 @@
     text-align: start;
     background-color: var(--white);
     border-radius: var(--borderradius);
-    padding: 3%;
-    margin-bottom: 12.5vh;
+    padding: 3rem;
+    margin-bottom: 7rem;
 }
 
 .expertise img{
-    width: 15%;
+    width: 3rem;
     height: auto;
     margin-bottom: 1.5rem;
 }
 
 .expertise h3{
-    margin-bottom: 25%;
+    margin-bottom: 4rem;
 }
 
 .expertise p{
@@ -106,7 +112,7 @@
     align-items: center;
     justify-content: center;
     color: var(--white);
-    margin-bottom: 12.5vh;
+    margin-bottom: 7rem;
 }
 
 #realisationssection h2{
@@ -121,7 +127,7 @@
     background-color: var(--black);
     border-radius: var(--borderradius);
     width: 90%;
-    padding: 4% 0%;
+    padding: 4rem 0%;
 }
 
 #realisationsgrid{
@@ -129,7 +135,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 7.5%;
+    grid-column-gap: 5rem;
     grid-row-gap: 5rem;
 }
 
@@ -181,33 +187,12 @@
     grid-area: 2 / 3 / 3 / 4;
 }
 
-#slider{
-    width: 90%;
-    display: flex;
-}
-
-#slides{
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-}
-
-.slide{
-    aspect-ratio: 16/6;
-    border-radius: var(--borderradius);
-}
-
-.slide:not(:first-child){
-    margin-bottom: -20%;
-}
-
 #vertuespresentationsection{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12.5vh;
+    margin-bottom: 7rem;
 }
 
 #vertuespresentationsection h3{
@@ -222,7 +207,7 @@
     width: 90%;
     display: flex;
     justify-content: space-between;
-    column-gap: 5%;
+    column-gap: 10rem;
 }
 
 #vertues{
@@ -235,7 +220,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 3%;
+    padding: 2.5rem;
     background-color: var(--black);
     border-radius: var(--borderradius);
 }
@@ -244,35 +229,20 @@
     margin-bottom: 0rem;
 }
 
-#clientsection{
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 12.5vh;
-}
-
-#clientslider{
-    background-color: var(--white);
-    width: 90%;
-}
-
 #reviewsection{
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 5%;
-    padding: 0% 5%;
-    margin-bottom: 12.5vh;
+    column-gap: 5rem;
+    padding: 0rem 4.5rem;
+    margin-bottom: 7rem;
 }
 
 #review{
     background-color: var(--white);
     border-radius: var(--borderradius);
-    padding: 3%;
+    padding: 3rem;
 }
 
 #review p{
@@ -288,7 +258,7 @@
 }
 
 #reviewimage{
-    width: 7.5%;
+    width: 4rem;
 }
 
 #reviewsection img{
@@ -313,7 +283,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 12.5vh;
+    margin-bottom: 7rem;
 }
 
 #offers{
@@ -331,7 +301,7 @@
     text-align: center;
     background-color: var(--white);
     border-radius: var(--borderradius);
-    padding: 3%;
+    padding: 3rem;
 }
 
 #weboffer h3, #formationoffers h3{
@@ -343,8 +313,8 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    column-gap: 10%;
+    justify-content: space-between;
+    column-gap: 3rem;
     margin-bottom: 2rem;
 }
 
@@ -384,7 +354,7 @@
     align-items: center;
     background-color: var(--white);
     border-radius: var(--borderradius);
-    padding: 3% 7.5%;
+    padding: 3rem 7.5rem;
 }
 
 #formationoffers h3{
@@ -412,7 +382,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12.5vh;
+    margin-bottom: 7rem;
 }
 
 #faqsection{
@@ -421,4 +391,113 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 12.5vh;
+}
+
+@media screen  and (max-width: 767px) {
+    #herosection{
+        height: 65vh;
+        padding: 0rem;
+    }
+
+    #heroquote{
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    #herodescription{
+        padding: 0rem 5rem;
+    }
+
+    #decorativeround{
+        width: 75vw;
+    }
+
+    .expertise{
+        min-width: 100%;
+    }
+
+    #expertises{
+        flex-wrap: wrap;
+    }
+
+    .expertise:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    #realisationsgrid{
+        width: 70%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 3rem;
+    }
+
+    #realisation1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+    #realisation2 {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    
+    #realisation3 {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    
+    #realisation4 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    
+    #realisation5 {
+        grid-area: 5 / 1 / 6 / 2;
+    }
+
+    #vertuespresentation{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 2rem;
+    }
+    
+    #vertues{
+        width: 100%;
+    }
+    
+    #freelancepresentation{
+        width: 100%;
+        height: 40vh;
+    }
+
+    #reviewsection{
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 3rem;
+        padding: 0rem 1.5rem;
+    }
+
+    #reviewsection h2{
+        text-align: center;
+        margin-bottom: 0rem;
+    }
+
+    #offers{
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+
+    #weboffer{
+        width: 100%;
+    }
+
+    #formationoffers{
+        width: 100%;
+        padding: 3rem;
+    }
+
+    #weboffercontainer{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: 3rem;
+    }
 }

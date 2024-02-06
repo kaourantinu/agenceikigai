@@ -8,7 +8,7 @@
     width: -moz-stretch;
     width: -webkit-stretch;
     width: stretch;
-    margin: 7vh 4.5vw 0vh 4.5vw;
+    margin: 4rem 4.5rem 0rem 4.5rem;
 }
 
 #logocontainer img{
@@ -120,3 +120,46 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen  and (max-width: 767px) {
+    #logocontainer{
+        width: 35%;
+    }
+
+    #buttoncontainer{
+        width: 60%;
+    }
+
+    #logocontainer img{
+        width: 100%;
+        height: auto;
+    }
+
+    #checkbox{
+        width: 20%;
+    }
+
+    #mainmenu{
+        flex-direction: column-reverse;
+    }
+
+    #menu{
+        width: 100%;
+    }
+
+    #menudescription{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #menudescription a{
+        width: 50%;
+    }
+
+    #menudescription img{
+        width: 100%;
+    }
+  }
