@@ -15,7 +15,6 @@ import List from "./components/List";
 import ListElement from "./components/ListElement";
 import LinkButton from "./components/LinkButton";
 import Question from "./components/Question/Question";
-import ContactForm from "./components/ContactForm";
 
 export const metadata: Metadata = {
   title: "ikigai : Agence web à Besançon - Création de site internet",
@@ -73,6 +72,45 @@ export default function Home() {
       <Section id={styles.realisationssection}>
         <Div id={styles.realisationsdiv}>
           <H2>Nos réalisations</H2>
+          <Div id={styles.realisationsgrid}>
+            <Div id={styles.realisation1}>
+              <Link href='https://lecomptoirdesbieresbesancon.com/' rel="external nofollow">
+                <Image src='/site-ecommerce-comptoir.png' alt="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
+              </Link>
+              <H3>Site web e-commerce</H3>
+              <P>Le Comptoir des Bières - Bar et cave à bières - École-Valentin</P>
+            </Div>
+            <Div id={styles.realisation2}>
+              <Link href='https://lepetitatelierphotos.com/' rel="external nofollow">
+                <Image src='/site-vitrine-lepetitatelierphotos.png' alt="Capture d'écran du site vitrine réalisé par notre agence pour le Petit Atelier Photos" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
+              </Link>
+              <H3>Site web vitrine</H3>
+              <P>Le Petit Atelier Photos - Photographe indépendante - Besançon</P>
+            </Div>
+            <Div id={styles.realisation3}>
+              <Link href='https://realestate-theta-eosin.vercel.app/' rel="external nofollow">
+                <Image src='/site-vitrine-realestate.png' alt="Capture d'écran du site d'annonces immobilières réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
+              </Link>
+              <H3>Site d&apos;annonces immobilières</H3>
+              <P>Real Estate Agency (Portfolio)</P>
+            </Div>
+            <Div id={styles.realisation4}>
+              <Link href='https://realmadridnextjs.vercel.app/' rel="external nofollow">
+                <Image src='/site-vitrine-realmadrid.png' alt="Capture d'écran du site vitrine du Real Madrid réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
+              </Link>
+              <H3>Site web vitrine</H3>
+              <P>Real Madrid (Portfolio)</P>
+            </Div>
+            <Div id={styles.realisation5}>
+              <Link href='https://appleiphone15pro.vercel.app/' rel="external nofollow">
+                <Image src='/configurateur-iphone.png' alt="Capture d'écran du configurateur en ligne iPhone réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
+              </Link>
+              <H3>Configurateur iPhone en ligne</H3>
+              <P>Apple (Portfolio)</P>
+            </Div>
+            <Div id={styles.realisation6}>
+            </Div>
+          </Div>
         </Div>
       </Section>
       <Section id={styles.vertuespresentationsection}>

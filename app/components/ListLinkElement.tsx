@@ -6,11 +6,12 @@ interface ListLinkElementProps{
     children: React.ReactNode;
     href: string;
     title: string;
+    rel?: string;
 }
 
 export default function ListLinkElement(props: ListLinkElementProps){
 
     return (
-        <li id={props.id} className={props.className}><Link href={`${props.href}`} title={props.title}>{props.children}</Link></li>
+        <li id={props.id} className={props.className}><Link href={`${props.href}`} title={props.title} rel={props.rel}>{props.children}</Link></li>
     )
 }

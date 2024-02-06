@@ -39,9 +39,9 @@ export default function Footer(){
                         <ListLinkElement title="Adresse mail d'ikigai, agence web à Besançon" href="mailto:contact@ikigaifreelance.com">contact@ikigaifreelance.com</ListLinkElement>
                     </List>
                     <List id={styles.socialmedias}>
-                        <ListLinkElement title="Compte Facebook d'ikigai, agence web à Besançon" href="https://www.facebook.com/profile.php?id=100084150312537">Facebook</ListLinkElement>
-                        <ListLinkElement title="Compte Instagram d'ikigai, agence web à Besançon" href="https://www.instagram.com/ikigaifreelance/">Instagram</ListLinkElement>
-                        <ListLinkElement title="Compte LinkedIn d'ikigai, agence web à Besançon" href="https://www.linkedin.com/company/ikigai-freelance/">LinkedIn</ListLinkElement>
+                        <ListLinkElement title="Compte Facebook d'ikigai, agence web à Besançon" href="https://www.facebook.com/profile.php?id=100084150312537" rel="external nofollow">Facebook</ListLinkElement>
+                        <ListLinkElement title="Compte Instagram d'ikigai, agence web à Besançon" href="https://www.instagram.com/ikigaifreelance/" rel="external nofollow">Instagram</ListLinkElement>
+                        <ListLinkElement title="Compte LinkedIn d'ikigai, agence web à Besançon" href="https://www.linkedin.com/company/ikigai-freelance/" rel="external nofollow">LinkedIn</ListLinkElement>
                     </List>
                 </Div>
             </Div>
