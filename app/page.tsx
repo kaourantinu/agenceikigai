@@ -15,7 +15,6 @@ import Strong from "./components/Strong";
 import List from "./components/List";
 import ListElement from "./components/ListElement";
 import LinkButton from "./components/LinkButton";
-import Question from "./components/Question/Question";
 
 export const metadata: Metadata = {
   title: "ikigai : Agence web à Besançon - Création de site internet",
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
     description: "Agence web à Besançon, nous aidons les entreprises et les indépendants à se rendre visible sur Internet grâce à des sites internet optimisés.",
     siteName: "ikigai : Agence web à Besançon - Création de site internet",
   },
-  robots: { index: false, follow: false }
+  robots: { index: true, follow: true }
 };
 
 export default function Home() {
@@ -45,8 +44,8 @@ export default function Home() {
     <main id={styles.main}>
       <Section id={styles.herosection} className="herosectionclass">
         <H1>Agence web à Besançon</H1>
-        <P id={styles.heroquote}>Nous vous rendons visible sur Internet</P>
-        <P id={styles.herodescription}>Se rendre visible sur Internet ne devrait pas être si difficile... Alors l&apos;agence web ikigai basée à Besançon le fait pour vous !</P>
+        <P id={styles.heroquote}>Nous vous rendons visible <br></br>sur Internet</P>
+        <P id={styles.herodescription}>Se rendre visible sur Internet ne devrait pas être si difficile... <br></br>Alors l&apos;agence web ikigai basée à Besançon le fait pour vous !</P>
         <DecorativeRound id={styles.decorativeround}/>
       </Section>
       <Section id={styles.presentationsection}>
@@ -55,17 +54,17 @@ export default function Home() {
         <Div id={styles.expertiseslider}>
           <Div id={styles.expertises}>
             <Link href='/creation-site-internet' title='Création de site internet' className={styles.expertise}>
-              <Image src='/world-wide-web.png' width={128} height={128} alt="icon" title="icon"/>
+              <Image src='/creation-site-internet.png' width={128} height={128} alt="Site internet" title="Site internet"/>
               <H3>Création de site internet</H3>
               <P>L&apos;agence ikigai crée des sites internet sur-mesure grâce au <Strong>développement web</Strong> avec le framework NextJS ou grâce à des outils no-code comme WordPress et Elementor.</P>
             </Link>
-            <Link href='/' title='Référencement naturel (SEO)' className={styles.expertise}>
-              <Image src='/world-wide-web.png' width={128} height={128} alt="icon" title="icon"/>
+            <Link href='/agence-seo' title='Référencement naturel (SEO)' className={styles.expertise}>
+              <Image src='/referencement-naturel-seo.png' width={128} height={128} alt="Oeil qui voit un site internet" title="Oeil qui voit un site internet"/>
               <H3>Référencement naturel (SEO)</H3>
               <P>L&apos;agence ikigai écrit chaque ligne de code d&apos;un site web en optimisant au maximum sa performance et sa position future dans les résultats de recherche Google afin que vos clients puissent trouver facilement votre marque.</P>
             </Link>
-            <Link href='/' title='Formateur digital Besançon' className={styles.expertise}>
-              <Image src='/world-wide-web.png' width={128} height={128} alt="icon" title="icon"/>
+            <Link href='/formation-wordpress-elementor' title='Formation WordPress Elementor' className={styles.expertise}>
+              <Image src='/formation-digitale.png' width={128} height={128} alt="Chapeau d'étudiant représentant la formation" title="Chapeau d'étudiant représentant la formation"/>
               <H3>Formations au digital</H3>
               <P>L&apos;agence ikigai forme également les personnes désireuses d&apos;apprendre et de développer leur visibilité digitale à la <Strong>conception de sites internet</Strong> grâce à des plateformes no-code (site WordPress/Elementor) ainsi qu&apos;au référencement naturel (SEO).</P>
             </Link>
@@ -74,36 +73,36 @@ export default function Home() {
       </Section>
       <Section id={styles.realisationssection}>
         <Div id={styles.realisationsdiv}>
-          <H2>Nos réalisations</H2>
+          <H2>Nos réalisations.</H2>
           <Div id={styles.realisationsgrid}>
             <Div id={styles.realisation1}>
               <H3>Le Comptoir des Bières - École-Valentin</H3>
-              <Link href='https://lecomptoirdesbieresbesancon.com/' rel="external nofollow" target="_blank">
-                <Image src='/site-ecommerce-comptoir.png' alt="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
+              <Link href='https://lecomptoirdesbieresbesancon.com/' rel="external nofollow" target="_blank" title="Site e-commerce réalisé par notre agence pour le Comptoir des Bières">
+                <Image src='/site-ecommerce-comptoir.png' alt="Site e-commerce réalisé par notre agence pour le Comptoir des Bières" width={3024} height={1644} title="Site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation2}>
               <H3>Le Petit Atelier Photos - Besançon</H3>
-              <Link href='https://lepetitatelierphotos.com/' rel="external nofollow" target="_blank">
-                <Image src='/site-vitrine-lepetitatelierphotos.png' alt="Capture d'écran du site vitrine réalisé par notre agence pour le Petit Atelier Photos" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
+              <Link href='https://lepetitatelierphotos.com/' rel="external nofollow" target="_blank" title="Site vitrine réalisé par notre agence pour le Petit Atelier Photos">
+                <Image src='/site-vitrine-lepetitatelierphotos.png' alt="Site vitrine réalisé par notre agence pour le Petit Atelier Photos" width={3024} height={1644} title="Site vitrine réalisé par notre agence pour le Petit Atelier Photos"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation3}>
               <H3>Real Estate Agency (Portfolio)</H3>
-              <Link href='https://realestate-theta-eosin.vercel.app/' rel="external nofollow" target="_blank">
-                <Image src='/site-vitrine-realestate.png' alt="Capture d'écran du site d'annonces immobilières réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
+              <Link href='https://realestate-theta-eosin.vercel.app/' rel="external nofollow" target="_blank" title="Site d'annonces immobilières réalisé par notre agence pour notre portfolio">
+                <Image src='/site-vitrine-realestate.png' alt="Site d'annonces immobilières réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Site d'annonces immobilières réalisé par notre agence pour notre portfolio"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation4}>
               <H3>Real Madrid (Portfolio)</H3>
-              <Link href='https://realmadridnextjs.vercel.app/' rel="external nofollow" target="_blank">
-                <Image src='/site-vitrine-realmadrid.png' alt="Capture d'écran du site vitrine du Real Madrid réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
+              <Link href='https://realmadridnextjs.vercel.app/' rel="external nofollow" target="_blank" title="Site vitrine du Real Madrid réalisé par notre agence pour notre portfolio">
+                <Image src='/site-vitrine-realmadrid.png' alt="Site vitrine du Real Madrid réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Site vitrine du Real Madrid réalisé par notre agence pour notre portfolio"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation5}>
               <H3>Apple (Portfolio)</H3>
-              <Link href='https://appleiphone15pro.vercel.app/' rel="external nofollow" target="_blank">
-                <Image src='/configurateur-iphone.png' alt="Capture d'écran du configurateur en ligne iPhone réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
+              <Link href='https://appleiphone15pro.vercel.app/' rel="external nofollow" target="_blank" title="Configurateur en ligne iPhone réalisé par notre agence pour notre portfolio">
+                <Image src='/configurateur-iphone.png' alt="Configurateur en ligne iPhone réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Configurateur en ligne iPhone réalisé par notre agence pour notre portfolio"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation6}>
@@ -126,13 +125,15 @@ export default function Home() {
               <P>Puisque l&apos;agence ikigai n&apos;est gérée que par une seule personne indépendante sans aucune équipe, fini les problèmes de communication ! Vous ne communiquez qu&apos;avec une seule personne durant tout le temps de création d&apos;un site web.</P>
             </Div>
             <Link href='/developpeur-web-freelance' title='Développeur web freelance à Besançon' id={styles.freelancepresentation}>
+              <Image src='/corentin-tournier-developpeur-web-freelance.webp' alt="Corentin Tournier, développeur web freelance gérant l'agence ikigai" title="Corentin Tournier, développeur web freelance gérant l'agence ikigai" width={3024} height={4032}></Image>
+              <Div id={styles.overlaypresentation}></Div>
               <H3>Corentin Tournier</H3>
               <P>Développeur web freelance gérant l&apos;agence ikigai</P>
             </Link>
           </Div>
       </Section>
       <Section id={styles.reviewsection}>
-        <H2>Ce que nos clients ont pensé de leur projet</H2>
+        <H2>Ce que nos clients ont pensé de leur projet.</H2>
         <Div id={styles.review}>
           <Div id={styles.reviewinfo}>
             <Div id={styles.reviewimage}>
@@ -175,10 +176,10 @@ export default function Home() {
                   <ListElement>Développés avec WordPress & Elementor ou avec NextJS (React)</ListElement>
                   <ListElement>Optimisés pour le référencement pour les <Strong>moteurs de recherche</Strong> sur le mot-clé désiré</ListElement>
                   <ListElement>Uniques au niveau de leur design</ListElement>
-                  <ListElement>Responsives (adapté aux écrans mobiles)</ListElement>
+                  <ListElement>Responsives (adaptés aux écrans mobiles)</ListElement>
                   <ListElement>Hébergement et nom de domaine inclus pendant 12 mois</ListElement>
                 </List>
-                <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
+                <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Demande de devis site internet" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
             </Div>
             <Div id={styles.formationoffers}>
               <H3>Formations numériques</H3>
@@ -193,19 +194,68 @@ export default function Home() {
                   <Image src='/logo-datadock.png' width={481} height={519} alt="Logo Certification Datadock, l'outil d'aide au référencement des organismes de formation"/>
                   <Image src='/logo_moncompteformation.png' width={2647} height={1559} alt="Logo Mon Compte Formation"/>
                 </Div>
-                <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
+                <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Demande de devis formation" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
             </Div>
           </Div>
       </Section>
       <Section id={styles.faqsection}>
-        <H2>Questions fréquentes</H2>
-        <Question questionNumber="1" question='C&apos;est quoi exactement une agence web ?' answer='Une agence web, aussi appelée agence digitale ou agence de communication digitale, est une structure qui rassemble un ou plusieurs experts du domaine du digital et du web marketing.'/>
-        <Question questionNumber="2" question='Quels métiers rassemble le domaine du digital ?' answer='Le domaine du digital et du webmarketing possède une grande multitude de métiers, tous différents selon la thématique : développeur web, chef de projet web, web designer pour de la création de sites internet ; community manager, graphiste pour le Community Management. Ce ne sont que les plus connus bien sûr, les métiers de ce domaine sont multiples.'/>
-        <Question questionNumber="3" question='Quel est le rôle d&apos;une agence web comme ikigai ?' answer='Le rôle des agences web comme la notre est de proposer un accompagnement aux entreprises et aux indépendants qui cherche à se rendre visible pour obtenir plus de clients en augmentant le trafic et en augmentant le taux d&apos;acquisition et de conversion de leur site web. Notre agence s&apos;occupe de la gestion de votre projet web de A à Z en travaillant avec vous en parallèle pour avancer ensemble sur votre demande.'/>
-        <Question questionNumber="4" question='Quels services sont proposés par notre agence web bisontine ?' answer='Notre agence web est experte dans la conception de sites vitrine et e-commerce et propose en complément une expertise sur le SEO. ikigai dispense également des programmes d&apos;accompagnement pour vous former au digital et tout faire vous-même.'/>
-        <Question questionNumber="5" question='Comment choisir la meilleure agence web à Besançon ?' answer='Pour choisir l&apos;agence web qui sera votre prestataire, vous pouvez vous fier à plusieurs éléments : sa réputation, son expérience, ses réalisations, les prestations qu&apos;elle propose mais également son mode de fonctionnement. Aussi, une expertise avérée peut faire pencher la balance : si vous recherchez un prestataire pour vous concevoir un site web spécifique qui sera bien placé dans les résultats de recherche Google, le fait de trouver un prestataire dans les meilleurs résultats démontre un savoir-faire d&apos;expert et une compétence auxquels vous pouvez faire confiance.'/>
-        <Question questionNumber="6" question='Qui a besoin d&apos;une agence web comme ikigai ?' answer='Toutes les personnes ayant comme objectif de créer une présence marketing en ligne ont besoin d&apos;une agence web : entreprises, indépendants, particuliers.'/>
-        <Question questionNumber="7" question='Avez-vous des locaux dans lesquels nous accueillir ?' answer='Malheureusement, il n&apos;y a pas de locaux à proprement parler. Tout rendez-vous se déroulera en visioconférence si possible et dans vos locaux ou dans un lieu public s&apos;il y a un besoin de se voir en physique.'/>
+        <H2>Questions fréquentes sur les agences web.</H2>
+        <Div className={styles.question}>
+          <input type="checkbox" id='accordion1'/>
+          <label htmlFor='accordion1' id={styles.questionlabel}>
+              <H3>C&apos;est quoi exactement une agence web ?</H3>
+              <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"/></svg>
+          </label>
+          <P className={styles.answer}>Une agence web, aussi appelée <Strong>agence digitale</Strong> ou <Strong>agence de communication digitale</Strong>, est une structure qui rassemble un ou plusieurs experts du domaine du digital et du <Strong>web marketing</Strong>.</P>
+        </Div>
+        <Div className={styles.question}>
+          <input type="checkbox" id='accordion2'/>
+          <label htmlFor='accordion2' id={styles.questionlabel}>
+              <H3>Quels métiers rassemble le domaine du digital ?</H3>
+              <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"/></svg>
+          </label>
+          <P className={styles.answer}>Le domaine du digital et du webmarketing possède une grande multitude de métiers, tous différents selon la thématique : <Strong>développeur web</Strong>, chef de <Strong>projet web</Strong>, <Strong>web designer</Strong> pour de la création de sites internet ; community manager, graphiste pour le Community Management. Ce ne sont que les plus connus bien sûr, les métiers de ce domaine sont multiples.</P>
+        </Div>
+        <Div className={styles.question}>
+          <input type="checkbox" id='accordion3'/>
+          <label htmlFor='accordion3' id={styles.questionlabel}>
+              <H3>Quel est le rôle d&apos;une agence web comme ikigai ?</H3>
+              <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"/></svg>
+          </label>
+          <P className={styles.answer}>Le rôle des <Strong>agences web</Strong> comme la notre est de proposer un accompagnement aux entreprises et aux indépendants qui cherche à se rendre visible pour obtenir plus de clients en augmentant le trafic et en augmentant le taux d&apos;acquisition et de conversion de leur site web. Notre agence s&apos;occupe de la gestion de votre <Strong>projet web</Strong> de A à Z en travaillant avec vous en parallèle pour avancer ensemble sur votre demande.</P>
+        </Div>
+        <Div className={styles.question}>
+          <input type="checkbox" id='accordion4'/>
+          <label htmlFor='accordion4' id={styles.questionlabel}>
+              <H3>Quels services sont proposés par notre agence web bisontine ?</H3>
+              <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"/></svg>
+          </label>
+          <P className={styles.answer}>Notre agence web est experte dans la <Strong>conception de sites</Strong> vitrine et e-commerce et propose en complément une expertise sur le SEO. ikigai dispense également des programmes d&apos;accompagnement pour vous former au digital et tout faire vous-même.</P>
+        </Div>
+        <Div className={styles.question}>
+          <input type="checkbox" id='accordion5'/>
+          <label htmlFor='accordion5' id={styles.questionlabel}>
+              <H3>Comment choisir la meilleure agence web à Besançon ?</H3>
+              <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"/></svg>
+          </label>
+          <P className={styles.answer}>Pour choisir l&apos;agence web qui sera votre prestataire, vous pouvez vous fier à plusieurs éléments : sa réputation, son expérience, ses réalisations, les prestations qu&apos;elle propose mais également son mode de fonctionnement. Aussi, une expertise avérée peut faire pencher la balance : si vous recherchez un prestataire pour vous concevoir un site web spécifique qui sera bien placé dans les résultats de recherche Google, le fait de trouver un prestataire dans les meilleurs résultats démontre un savoir-faire d&apos;expert et une compétence auxquels vous pouvez faire confiance.</P>
+        </Div>
+        <Div className={styles.question}>
+          <input type="checkbox" id='accordion6'/>
+          <label htmlFor='accordion6' id={styles.questionlabel}>
+              <H3>Qui a besoin d&apos;une agence web comme ikigai ?</H3>
+              <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"/></svg>
+          </label>
+          <P className={styles.answer}>Toutes les personnes ayant comme objectif de créer une présence marketing en ligne ont besoin d&apos;une agence web : entreprises, indépendants, particuliers.</P>
+        </Div>
+        <Div className={styles.question}>
+          <input type="checkbox" id='accordion7'/>
+          <label htmlFor='accordion7' id={styles.questionlabel}>
+              <H3>Avez-vous des locaux dans lesquels nous accueillir ?</H3>
+              <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><path d="M69.8437,43.3876,33.8422,13.3863a6.0035,6.0035,0,0,0-7.6878,9.223l30.47,25.39-30.47,25.39a6.0035,6.0035,0,0,0,7.6878,9.2231L69.8437,52.6106a6.0091,6.0091,0,0,0,0-9.223Z"/></svg>
+          </label>
+          <P className={styles.answer}>Malheureusement, il n&apos;y a pas de locaux à proprement parler. Tout rendez-vous se déroulera en visioconférence si possible et dans vos locaux ou dans un lieu public s&apos;il y a un besoin de se voir en physique.</P>
+        </Div>
       </Section>
     </main>
   );

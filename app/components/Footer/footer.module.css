@@ -113,5 +113,12 @@
     #secondfooter ul{
         width: 100%;
         margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #secondfooter li:not(:last-child){
+        margin-right: 0rem;
+        margin-bottom: 1rem;
     }
 }

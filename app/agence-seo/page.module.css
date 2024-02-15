@@ -70,6 +70,10 @@
     text-align: center;
 }
 
+#presentationparagraph{
+    margin-inline: 10rem;
+}
+
 #expertiseslider{
     width: 90%;
     overflow: hidden;
@@ -107,7 +111,7 @@
     margin-bottom: 0;
 }
 
-#realisationssection{
+#definitionsection{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,76 +119,31 @@
     margin-bottom: 7rem;
 }
 
-#realisationssection h2{
-    margin-bottom: 3.5rem;
-}
-
-#realisationsdiv{
+#definitiondiv{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    column-gap: 5%;
     background-color: var(--black);
     border-radius: var(--borderradius);
     width: 90%;
-    padding: 4rem 0%;
+    padding: 4rem;
 }
 
-#realisationsgrid{
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 5rem;
-    grid-row-gap: 5rem;
+#titlediv{
+    width: 40%;
 }
 
-#realisationsgrid div{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
+#titlediv h2{
+    margin: 0rem;
 }
 
-#realisationsgrid div img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: solid 1px rgb(100%, 100%, 100%, 0.25);
-    margin-bottom: 1rem;
+#paragraphediv{
+    width: 60%;
 }
 
-#realisationsgrid div h3{
-    margin-bottom: 0.5rem;
-}
-
-#realisationsgrid div p{
-    margin-bottom: 0rem;
-}
-
-#realisation1 {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-#realisation2 {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
-#realisation3 {
-    grid-area: 1 / 3 / 2 / 4;
-}
-
-#realisation4 {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-#realisation5 {
-    grid-area: 2 / 2 / 3 / 3;
-}
-
-#realisation6 {
-    grid-area: 2 / 3 / 3 / 4;
+#paragraphediv p{
+    margin: 0rem;
 }
 
 #vertuespresentationsection{
@@ -215,6 +174,7 @@
 }
 
 #freelancepresentation{
+    position: relative;
     color: var(--white);
     width: 40%;
     display: flex;
@@ -223,57 +183,36 @@
     padding: 2.5rem;
     background-color: var(--black);
     border-radius: var(--borderradius);
+    overflow: hidden;
+}
+
+#freelancepresentation img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+#overlaypresentation{
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,17,17,0) 25%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#freelancepresentation h3{
+    z-index: 2;
 }
 
 #freelancepresentation p{
+    z-index: 2;
     margin-bottom: 0rem;
-}
-
-#reviewsection{
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 5rem;
-    padding: 0rem 4.5rem;
-    margin-bottom: 7rem;
-}
-
-#review{
-    background-color: var(--white);
-    border-radius: var(--borderradius);
-    padding: 3rem;
-}
-
-#review p{
-    margin-bottom: 0rem;
-}
-
-#reviewinfo{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    column-gap: 2%;
-    margin-bottom: 1rem;
-}
-
-#reviewimage{
-    width: 4rem;
-}
-
-#reviewsection img{
-    width: 100%;
-    height: auto;
-    border-radius: 100%;
-}
-
-#reviewtextinfo h3{
-    margin-bottom: 0.5rem;
-}
-
-#reviewtextinfo h4{
-    font-weight: 500;
-    font-style: italic;
 }
 
 #pricesection{
@@ -287,14 +226,14 @@
 }
 
 #offers{
-    width: 90%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 #weboffer{
-    width: 47.5%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -313,7 +252,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     column-gap: 3rem;
     margin-bottom: 2rem;
 }
@@ -393,12 +332,74 @@
     margin-bottom: 12.5vh;
 }
 
+#faqsection h2{
+    text-align: center;
+}
+
+.question{
+    width: 80%;
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: var(--borderradius);
+}
+
+.question h3{
+    font-size: 1.3rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.question:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.question input[type="checkbox"] {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+#questionlabel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#questionlabel svg{
+    height: 1rem;
+    width: auto;
+    transform: rotate(180deg);
+}
+
+.question input[type="checkbox"]:checked ~ #questionlabel svg {
+    transform: rotate(90deg);
+}
+
+.answer{
+    display: none;
+    margin: 2rem 0rem 0rem 0rem;
+}
+
+.question input[type="checkbox"]:checked ~ .answer {
+    display: block;
+}
+
+#pilierlist{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    margin-left: 3rem;
+}
+
 @media screen  and (max-width: 767px) {
     #herosection{
         height: 70vh;
         padding: 0rem;
         border-radius: 0px;
         margin-bottom: 5rem;
+        justify-content: flex-end;
+        padding-bottom: 6rem;
     }
 
     #heroquote{
@@ -412,6 +413,11 @@
 
     #decorativeround{
         width: 75vw;
+        margin-bottom: 2.5rem;
+    }
+
+    #presentationparagraph{
+        margin-inline: 2rem;
     }
 
     .expertise{
@@ -424,35 +430,6 @@
 
     .expertise:not(:last-child){
         margin-bottom: 2rem;
-    }
-
-    #realisationsgrid{
-        width: 70%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 3rem;
-    }
-
-    #realisation1 {
-        grid-area: 1 / 1 / 2 / 2;
-    }
-    
-    #realisation2 {
-        grid-area: 2 / 1 / 3 / 2;
-    }
-    
-    #realisation3 {
-        grid-area: 3 / 1 / 4 / 2;
-    }
-    
-    #realisation4 {
-        grid-area: 4 / 1 / 5 / 2;
-    }
-    
-    #realisation5 {
-        grid-area: 5 / 1 / 6 / 2;
     }
 
     #vertuespresentation{
@@ -468,6 +445,13 @@
     #freelancepresentation{
         width: 100%;
         height: 40vh;
+        padding: 2rem;
+    }
+
+    #freelancepresentation img{
+        width: 100%;
+        height: auto;
+        top: -40px;
     }
 
     #reviewsection{
@@ -483,6 +467,7 @@
     }
 
     #offers{
+        width: 90%;
         flex-wrap: wrap;
         row-gap: 2rem;
     }
@@ -501,5 +486,22 @@
         align-items: center;
         justify-content: center;
         row-gap: 3rem;
+    }
+
+    .question{
+        padding: 2rem;
+    }
+
+    #definitiondiv{
+        flex-wrap: wrap;
+    }
+
+    #titlediv{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    
+    #paragraphediv{
+        width: 100%;
     }
 }

@@ -22,9 +22,25 @@
     opacity: 0;
 }
 
+#questionlabel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#questionlabel svg{
+    height: 1rem;
+    width: auto;
+    transform: rotate(180deg);
+}
+
+.question input[type="checkbox"]:checked ~ #questionlabel svg {
+    transform: rotate(90deg);
+}
+
 .answer{
     display: none;
-    margin: 1rem 0rem 0rem 0rem;
+    margin: 2rem 0rem 0rem 0rem;
 }
 
 .question input[type="checkbox"]:checked ~ .answer {

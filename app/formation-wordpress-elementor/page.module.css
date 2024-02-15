@@ -70,6 +70,10 @@
     text-align: center;
 }
 
+#presentationtext{
+    margin-inline: 15rem;
+}
+
 #expertiseslider{
     width: 90%;
     overflow: hidden;
@@ -115,6 +119,27 @@
     margin-bottom: 7rem;
 }
 
+.requirepoint{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10%;
+}
+
+.requirepointdiv{
+    width: 50%;
+}
+
+.requirepoint h3{
+    margin-bottom: 0.5rem;
+}
+
+#financementtext{
+    text-align: center;
+    margin: 1rem 0rem 2rem 0rem;
+}
+
 #realisationssection h2{
     margin-bottom: 3.5rem;
 }
@@ -127,7 +152,7 @@
     background-color: var(--black);
     border-radius: var(--borderradius);
     width: 90%;
-    padding: 4rem 0%;
+    padding: 4rem;
 }
 
 #realisationsgrid{
@@ -161,30 +186,6 @@
 
 #realisationsgrid div p{
     margin-bottom: 0rem;
-}
-
-#realisation1 {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-#realisation2 {
-    grid-area: 1 / 2 / 2 / 3;
-}
-
-#realisation3 {
-    grid-area: 1 / 3 / 2 / 4;
-}
-
-#realisation4 {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-#realisation5 {
-    grid-area: 2 / 2 / 3 / 3;
-}
-
-#realisation6 {
-    grid-area: 2 / 3 / 3 / 4;
 }
 
 #vertuespresentationsection{
@@ -256,53 +257,6 @@
     margin-bottom: 0rem;
 }
 
-#reviewsection{
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 5rem;
-    padding: 0rem 4.5rem;
-    margin-bottom: 7rem;
-}
-
-#review{
-    background-color: var(--white);
-    border-radius: var(--borderradius);
-    padding: 3rem;
-}
-
-#review p{
-    margin-bottom: 0rem;
-}
-
-#reviewinfo{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    column-gap: 2%;
-    margin-bottom: 1rem;
-}
-
-#reviewimage{
-    width: 4rem;
-}
-
-#reviewsection img{
-    width: 100%;
-    height: auto;
-    border-radius: 100%;
-}
-
-#reviewtextinfo h3{
-    margin-bottom: 0.5rem;
-}
-
-#reviewtextinfo h4{
-    font-weight: 500;
-    font-style: italic;
-}
-
 #pricesection{
     background-color: transparent;
     display: flex;
@@ -317,7 +271,7 @@
     width: 90%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #weboffer{
@@ -385,7 +339,16 @@
 }
 
 #formationoffers h3{
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
+}
+
+#formationoffers h4{
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.lastchild{
+    margin-bottom: 3rem!important;
 }
 
 #qualiopi{
@@ -401,6 +364,34 @@
 
 #logoformation img{
     width: 20%;
+    height: auto;
+}
+
+#clientsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+
+#clientsection h2{
+    text-align: center;
+}
+
+#logoorganisme{
+    width: 80%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10%;
+    background-color: var(--white);
+    padding: 4rem;
+    border-radius: var(--borderradius);
+}
+
+#logoorganisme img{
+    width: 100%;
     height: auto;
 }
 
@@ -480,12 +471,17 @@
         border-radius: 0px;
         margin-bottom: 5rem;
         justify-content: flex-end;
-        padding-bottom: 6rem;
+        padding-bottom: 7rem;
+    }
+
+    #herosection h1{
+        margin-inline: 5rem;
     }
 
     #heroquote{
-        font-size: 3rem;
-        line-height: 4rem;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        margin-inline: 2rem;
     }
 
     #herodescription{
@@ -494,7 +490,11 @@
 
     #decorativeround{
         width: 75vw;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #presentationtext{
+        margin-inline: 2.5rem;
     }
 
     .expertise{
@@ -509,33 +509,18 @@
         margin-bottom: 2rem;
     }
 
-    #realisationsgrid{
-        width: 70%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 3rem;
+    #realisationsdiv{
+        text-align: center;
     }
 
-    #realisation1 {
-        grid-area: 1 / 1 / 2 / 2;
+    .requirepoint{
+        text-align: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
-    
-    #realisation2 {
-        grid-area: 2 / 1 / 3 / 2;
-    }
-    
-    #realisation3 {
-        grid-area: 3 / 1 / 4 / 2;
-    }
-    
-    #realisation4 {
-        grid-area: 4 / 1 / 5 / 2;
-    }
-    
-    #realisation5 {
-        grid-area: 5 / 1 / 6 / 2;
+
+    .requirepointdiv{
+        width: 100%;
     }
 
     #vertuespresentation{
@@ -559,17 +544,13 @@
         height: auto;
         top: -40px;
     }
-
-    #reviewsection{
+    
+    #logoorganisme{
         flex-wrap: wrap;
-        justify-content: center;
-        row-gap: 3rem;
-        padding: 0rem 1.5rem;
     }
-
-    #reviewsection h2{
-        text-align: center;
-        margin-bottom: 0rem;
+    
+    .linkimage:not(:last-child){
+        margin-bottom: 6rem;
     }
 
     #offers{
