@@ -79,7 +79,7 @@ export default function Home() {
         <P>ikigai est une <Strong>agence web spécialisée</Strong> dans la <Strong>création de site web</Strong>, le référencement naturel et la formation dans le but de booster votre <Strong>communication digitale</Strong>.</P>
         <Div id={styles.expertiseslider}>
           <Div id={styles.expertises}>
-            <Link href='/creation-site-internet' title='Création de site internet' className={styles.expertise}>
+            <Link href='/developpeur-web-freelance' title='Création de site internet' className={styles.expertise}>
               <Image src='/creation-site-internet.png' width={128} height={128} alt="Site internet" title="Site internet"/>
               <H3>Création de site internet</H3>
               <P>L&apos;agence ikigai crée des sites internet sur-mesure grâce au <Strong>développement web</Strong> avec le framework NextJS ou grâce à des outils no-code comme WordPress et Elementor.</P>
