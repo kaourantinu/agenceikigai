@@ -29,8 +29,7 @@ export default function Header(){
             <Div id={styles.buttoncontainer} className={styles.headersidecontainer}>
                 <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Demande de devis" title='Demande de devis gratuit' className="button whitebutton">Devis gratuit</LinkButton>
                 <input type="checkbox" id={styles.menucheckbox}/>
-                <label htmlFor={styles.menucheckbox} id={styles.checkbox} ref={menubutton}>
-                </label>
+                <label htmlFor={styles.menucheckbox} id={styles.checkbox} ref={menubutton}></label>
                 <Div id={styles.mainmenu}>
                     <Div id={styles.menu}>
                         <nav>

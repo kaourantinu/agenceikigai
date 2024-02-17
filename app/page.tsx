@@ -15,6 +15,21 @@ import Strong from "./components/Strong";
 import List from "./components/List";
 import ListElement from "./components/ListElement";
 import LinkButton from "./components/LinkButton";
+import { LocalBusiness, WithContext } from 'schema-dts'
+ 
+const jsonLd: WithContext<LocalBusiness> = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "ikigai : Agence web à Besançon",
+  image: "https://ikigaifreelance.com/logo-ikigai-blanc.svg",
+  telephone: "07 61 41 30 61",
+  email: "contact@ikigaifreelance.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Besançon",
+    addressRegion: "Franche-Comté"
+  }
+}
 
 export const metadata: Metadata = {
   title: "ikigai : Agence web à Besançon - Création de site internet",
@@ -29,19 +44,30 @@ export const metadata: Metadata = {
     canonical: "https://ikigaifreelance.com" 
   },
   openGraph: {
+    images:"/twittercard-100.jpg",
     type: "website",
     url: "https://ikigaifreelance.com",
     title: "ikigai : Agence web à Besançon - Création de site internet",
     description: "Agence web à Besançon, nous aidons les entreprises et les indépendants à se rendre visible sur Internet grâce à des sites internet optimisés.",
     siteName: "ikigai : Agence web à Besançon - Création de site internet",
   },
-  robots: { index: true, follow: true }
+  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image", 
+    site: "https://ikigaifreelance.com", 
+    creator: "Agence ikigai", 
+    images: "/twittercard-100.jpg"
+  }
 };
 
 export default function Home() {
 
   return (
     <main id={styles.main}>
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       <Section id={styles.herosection} className="herosectionclass">
         <H1>Agence web à Besançon</H1>
         <P id={styles.heroquote}>Nous vous rendons visible <br></br>sur Internet</P>
@@ -77,31 +103,31 @@ export default function Home() {
           <Div id={styles.realisationsgrid}>
             <Div id={styles.realisation1}>
               <H3>Le Comptoir des Bières - École-Valentin</H3>
-              <Link href='https://lecomptoirdesbieresbesancon.com/' rel="external nofollow" target="_blank" title="Site e-commerce réalisé par notre agence pour le Comptoir des Bières">
+              <Link href='https://lecomptoirdesbieresbesancon.com/' rel="external nofollow noopener noreferrer" target="_blank" title="Site e-commerce réalisé par notre agence pour le Comptoir des Bières">
                 <Image src='/site-ecommerce-comptoir.png' alt="Site e-commerce réalisé par notre agence pour le Comptoir des Bières" width={3024} height={1644} title="Site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation2}>
               <H3>Le Petit Atelier Photos - Besançon</H3>
-              <Link href='https://lepetitatelierphotos.com/' rel="external nofollow" target="_blank" title="Site vitrine réalisé par notre agence pour le Petit Atelier Photos">
+              <Link href='https://lepetitatelierphotos.com/' rel="external nofollow noopener noreferrer" target="_blank" title="Site vitrine réalisé par notre agence pour le Petit Atelier Photos">
                 <Image src='/site-vitrine-lepetitatelierphotos.png' alt="Site vitrine réalisé par notre agence pour le Petit Atelier Photos" width={3024} height={1644} title="Site vitrine réalisé par notre agence pour le Petit Atelier Photos"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation3}>
               <H3>Real Estate Agency (Portfolio)</H3>
-              <Link href='https://realestate-theta-eosin.vercel.app/' rel="external nofollow" target="_blank" title="Site d'annonces immobilières réalisé par notre agence pour notre portfolio">
+              <Link href='https://realestate-theta-eosin.vercel.app/' rel="external nofollow noopener noreferrer" target="_blank" title="Site d'annonces immobilières réalisé par notre agence pour notre portfolio">
                 <Image src='/site-vitrine-realestate.png' alt="Site d'annonces immobilières réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Site d'annonces immobilières réalisé par notre agence pour notre portfolio"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation4}>
               <H3>Real Madrid (Portfolio)</H3>
-              <Link href='https://realmadridnextjs.vercel.app/' rel="external nofollow" target="_blank" title="Site vitrine du Real Madrid réalisé par notre agence pour notre portfolio">
+              <Link href='https://realmadridnextjs.vercel.app/' rel="external nofollow noopener noreferrer" target="_blank" title="Site vitrine du Real Madrid réalisé par notre agence pour notre portfolio">
                 <Image src='/site-vitrine-realmadrid.png' alt="Site vitrine du Real Madrid réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Site vitrine du Real Madrid réalisé par notre agence pour notre portfolio"></Image>
               </Link>
             </Div>
             <Div id={styles.realisation5}>
               <H3>Apple (Portfolio)</H3>
-              <Link href='https://appleiphone15pro.vercel.app/' rel="external nofollow" target="_blank" title="Configurateur en ligne iPhone réalisé par notre agence pour notre portfolio">
+              <Link href='https://appleiphone15pro.vercel.app/' rel="external nofollow noopener noreferrer" target="_blank" title="Configurateur en ligne iPhone réalisé par notre agence pour notre portfolio">
                 <Image src='/configurateur-iphone.png' alt="Configurateur en ligne iPhone réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Configurateur en ligne iPhone réalisé par notre agence pour notre portfolio"></Image>
               </Link>
             </Div>
@@ -179,7 +205,7 @@ export default function Home() {
                   <ListElement>Responsives (adaptés aux écrans mobiles)</ListElement>
                   <ListElement>Hébergement et nom de domaine inclus pendant 12 mois</ListElement>
                 </List>
-                <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Demande de devis site internet" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
+                <LinkButton rel="external nofollow noopener noreferrer" target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Demande de devis site internet" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
             </Div>
             <Div id={styles.formationoffers}>
               <H3>Formations numériques</H3>
@@ -190,11 +216,11 @@ export default function Home() {
                 </List>
                 <P id={styles.qualiopi}>Formations certifiées Qualiopi & finançables OPCO et Pôle Emploi</P>
                 <Div id={styles.logoformation}>
-                  <Image src='/logo-qualiopi.png' width={501} height={211} alt="Logo Qualiopi, certification attestant de la qualité des prestations proposées par les organismes de formation sur la base du Référentiel National Qualité"/>
-                  <Image src='/logo-datadock.png' width={481} height={519} alt="Logo Certification Datadock, l'outil d'aide au référencement des organismes de formation"/>
-                  <Image src='/logo_moncompteformation.png' width={2647} height={1559} alt="Logo Mon Compte Formation"/>
+                  <Image src='/logo-qualiopi.png' width={501} height={211} alt="Logo Qualiopi, certification attestant de la qualité des prestations proposées par les organismes de formation sur la base du Référentiel National Qualité" title="Logo Qualiopi, certification attestant de la qualité des prestations proposées par les organismes de formation sur la base du Référentiel National Qualité"/>
+                  <Image src='/logo-datadock.png' width={481} height={519} alt="Logo Certification Datadock, l'outil d'aide au référencement des organismes de formation" title="Logo Certification Datadock, l'outil d'aide au référencement des organismes de formation"/>
+                  <Image src='/logo_moncompteformation.png' width={2647} height={1559} alt="Logo Mon Compte Formation" title="Logo Mon Compte Formation"/>
                 </Div>
-                <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Demande de devis formation" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
+                <LinkButton rel="external nofollow noopener noreferrer" target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Demande de devis formation" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
             </Div>
           </Div>
       </Section>

@@ -1,7 +1,11 @@
 import localFont from 'next/font/local'
 import "./globals.css";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer"
+import Footer from "./components/Footer/Footer";
+
+export const metadata = {
+  metadataBase: new URL('https://ikigaifreelance.com'),
+}
 
 const grotesk = localFont({
   src: [

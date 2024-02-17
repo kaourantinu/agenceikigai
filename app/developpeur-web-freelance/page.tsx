@@ -15,6 +15,21 @@ import Strong from "../components/Strong";
 import List from "../components/List";
 import ListElement from "../components/ListElement";
 import LinkButton from "../components/LinkButton";
+import { LocalBusiness, WithContext } from 'schema-dts'
+ 
+const jsonLd: WithContext<LocalBusiness> = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Corentin Tournier : Développeur web freelance à Besançon",
+  image: "https://ikigaifreelance.com/logo-ikigai-blanc.svg",
+  telephone: "07 61 41 30 61",
+  email: "contact@ikigaifreelance.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Besançon",
+    addressRegion: "Franche-Comté"
+  }
+}
 
 export const metadata: Metadata = {
     title: "Corentin Tournier - Développeur web freelance à Besançon",
@@ -29,19 +44,30 @@ export const metadata: Metadata = {
         canonical: "https://ikigaifreelance.com/developpeur-web-freelance" 
     },
     openGraph: {
+        images:'/twittercard-100.jpg',
         type: "website",
         url: "https://ikigaifreelance.com/developpeur-web-freelance",
         title: "Corentin Tournier - Développeur web freelance à Besançon",
         description: "Développeur web freelance et spécialisé dans le référencement naturel (SEO), j'aide les entreprises et les indépendants à se rendre visible sur Internet.",
         siteName: "ikigai : Agence web à Besançon - Création de site internet",
     },
-    robots: { index: true, follow: true }
+    robots: { index: true, follow: true },
+    twitter: {
+        card: "summary_large_image", 
+        site: "https://ikigaifreelance.com", 
+        creator: "Agence ikigai", 
+        images: "/twittercard-100.jpg"
+      }
   };
 
 export default function Page(){
 
     return (
         <main id={styles.main}>
+            <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
             <Section id={styles.herosection} className="herosectionclass">
                 <H1>Développeur web freelance à Besançon</H1>
                 <P id={styles.heroquote}>Je rends les entreprises et les indépendants<br></br> visibles sur Internet</P>
@@ -77,31 +103,31 @@ export default function Page(){
                 <Div id={styles.realisationsgrid}>
                     <Div id={styles.realisation1}>
                     <H3>Le Comptoir des Bières - École-Valentin</H3>
-                    <Link href='https://lecomptoirdesbieresbesancon.com/' rel="external nofollow" target="_blank" title="site e-commerce réalisé par notre agence pour le Comptoir des Bières">
+                    <Link href='https://lecomptoirdesbieresbesancon.com/' rel="external nofollow noopener noreferrer" target="_blank" title="site e-commerce réalisé par notre agence pour le Comptoir des Bières">
                         <Image src='/site-ecommerce-comptoir.png' alt="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières" width={3024} height={1644} title="Capture d'écran du site e-commerce réalisé par notre agence pour le Comptoir des Bières"></Image>
                     </Link>
                     </Div>
                     <Div id={styles.realisation2}>
                     <H3>Le Petit Atelier Photos - Besançon</H3>
-                    <Link href='https://lepetitatelierphotos.com/' rel="external nofollow" target="_blank" title="site vitrine réalisé par notre agence pour le Petit Atelier Photos">
+                    <Link href='https://lepetitatelierphotos.com/' rel="external nofollow noopener noreferrer" target="_blank" title="site vitrine réalisé par notre agence pour le Petit Atelier Photos">
                         <Image src='/site-vitrine-lepetitatelierphotos.png' alt="Capture d'écran du site vitrine réalisé par notre agence pour le Petit Atelier Photos" width={3024} height={1644} title="Capture d'écran du site vitrine réalisé par notre agence pour le Petit Atelier Photos"></Image>
                     </Link>
                     </Div>
                     <Div id={styles.realisation3}>
                     <H3>Real Estate Agency (Portfolio)</H3>
-                    <Link href='https://realestate-theta-eosin.vercel.app/' rel="external nofollow" target="_blank" title="site d'annonces immobilières réalisé par notre agence pour notre portfolio">
+                    <Link href='https://realestate-theta-eosin.vercel.app/' rel="external nofollow noopener noreferrer" target="_blank" title="site d'annonces immobilières réalisé par notre agence pour notre portfolio">
                         <Image src='/site-vitrine-realestate.png' alt="Capture d'écran du site d'annonces immobilières réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site d'annonces immobilières réalisé par notre agence pour notre portfolio"></Image>
                     </Link>
                     </Div>
                     <Div id={styles.realisation4}>
                     <H3>Real Madrid (Portfolio)</H3>
-                    <Link href='https://realmadridnextjs.vercel.app/' rel="external nofollow" target="_blank" title="site vitrine du Real Madrid réalisé par notre agence pour notre portfolio">
+                    <Link href='https://realmadridnextjs.vercel.app/' rel="external nofollow noopener noreferrer" target="_blank" title="site vitrine du Real Madrid réalisé par notre agence pour notre portfolio">
                         <Image src='/site-vitrine-realmadrid.png' alt="Capture d'écran du site vitrine du Real Madrid réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du site vitrine du Real Madrid réalisé par notre agence pour notre portfolio"></Image>
                     </Link>
                     </Div>
                     <Div id={styles.realisation5}>
                     <H3>Apple (Portfolio)</H3>
-                    <Link href='https://appleiphone15pro.vercel.app/' rel="external nofollow" target="_blank" title="configurateur en ligne iPhone réalisé par notre agence pour notre portfolio">
+                    <Link href='https://appleiphone15pro.vercel.app/' rel="external nofollow noopener noreferrer" target="_blank" title="configurateur en ligne iPhone réalisé par notre agence pour notre portfolio">
                         <Image src='/configurateur-iphone.png' alt="Capture d'écran du configurateur en ligne iPhone réalisé par notre agence pour notre portfolio" width={3024} height={1644} title="Capture d'écran du configurateur en ligne iPhone réalisé par notre agence pour notre portfolio"></Image>
                     </Link>
                     </Div>
@@ -179,7 +205,7 @@ export default function Page(){
                         <ListElement>Responsives (adapté aux écrans mobiles)</ListElement>
                         <ListElement>Hébergement et <Strong>nom de domaine</Strong> inclus pendant 12 mois</ListElement>
                         </List>
-                        <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
+                        <LinkButton rel="external nofollow noopener noreferrer" target="_blank" href="mailto:contact@ikigaifreelance.com" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
                     </Div>
                     <Div id={styles.formationoffers}>
                     <H3>Formations numériques</H3>
@@ -194,7 +220,7 @@ export default function Page(){
                         <Image src='/logo-datadock.png' width={481} height={519} alt="Logo Certification Datadock, l'outil d'aide au référencement des organismes de formation" title="Logo Certification Datadock, l'outil d'aide au référencement des organismes de formation"/>
                         <Image src='/logo_moncompteformation.png' width={2647} height={1559} alt="Logo Mon Compte Formation" title="Logo Mon Compte Formation"/>
                         </Div>
-                        <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
+                        <LinkButton rel="external nofollow noopener noreferrer" target="_blank" href="mailto:contact@ikigaifreelance.com" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
                     </Div>
                 </Div>
             </Section>

@@ -34,14 +34,14 @@ export default function Footer(){
                 <Div id={styles.footercontact}>
                     <P>Contact</P>
                     <List className={styles.infolist}>
-                        <ListLinkElement title="Localisation d'ikigai, agence web à Besançon" href="https://maps.app.goo.gl/cJ9Dz4mSuExCRDq97" target="_blank">Besançon, Doubs, Franche-Comté</ListLinkElement>
+                        <ListLinkElement title="Localisation d'ikigai, agence web à Besançon" href="https://maps.app.goo.gl/cJ9Dz4mSuExCRDq97" rel="external nofollow noopener noreferrer" target="_blank">Besançon, Doubs, Franche-Comté</ListLinkElement>
                         <ListLinkElement title="Numéro de téléphone d'ikigai, agence web à Besançon" href="tel:+33761413061">07 61 41 30 61</ListLinkElement>
-                        <ListLinkElement title="Adresse mail d'ikigai, agence web à Besançon" href="mailto:contact@ikigaifreelance.com" target="_blank">contact@ikigaifreelance.com</ListLinkElement>
+                        <ListLinkElement title="Adresse mail d'ikigai, agence web à Besançon" href="mailto:contact@ikigaifreelance.com" rel="external nofollow noopener noreferrer" target="_blank">contact@ikigaifreelance.com</ListLinkElement>
                     </List>
                     <List id={styles.socialmedias}>
-                        <ListLinkElement title="Compte Facebook d'ikigai, agence web à Besançon" href="https://www.facebook.com/profile.php?id=100084150312537" rel="external nofollow" target="_blank">Facebook</ListLinkElement>
-                        <ListLinkElement title="Compte Instagram d'ikigai, agence web à Besançon" href="https://www.instagram.com/ikigaifreelance/" rel="external nofollow" target="_blank">Instagram</ListLinkElement>
-                        <ListLinkElement title="Compte LinkedIn d'ikigai, agence web à Besançon" href="https://www.linkedin.com/company/ikigai-freelance/" rel="external nofollow" target="_blank">LinkedIn</ListLinkElement>
+                        <ListLinkElement title="Compte Facebook d'ikigai, agence web à Besançon" href="https://www.facebook.com/profile.php?id=100084150312537" rel="external nofollow noopener noreferrer" target="_blank">Facebook</ListLinkElement>
+                        <ListLinkElement title="Compte Instagram d'ikigai, agence web à Besançon" href="https://www.instagram.com/ikigaifreelance/" rel="external nofollow noopener noreferrer" target="_blank">Instagram</ListLinkElement>
+                        <ListLinkElement title="Compte LinkedIn d'ikigai, agence web à Besançon" href="https://www.linkedin.com/company/ikigai-freelance/" rel="external nofollow noopener noreferrer" target="_blank">LinkedIn</ListLinkElement>
                     </List>
                 </Div>
             </Div>

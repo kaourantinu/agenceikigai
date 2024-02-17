@@ -13,6 +13,21 @@ import H3 from "../components/H3";
 import List from "../components/List";
 import ListElement from "../components/ListElement";
 import LinkButton from "../components/LinkButton";
+import { LocalBusiness, WithContext } from 'schema-dts'
+ 
+const jsonLd: WithContext<LocalBusiness> = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "ikigai : Agence SEO à Besançon",
+  image: "https://ikigaifreelance.com/logo-ikigai-blanc.svg",
+  telephone: "07 61 41 30 61",
+  email: "contact@ikigaifreelance.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Besançon",
+    addressRegion: "Franche-Comté"
+  }
+}
 
 export const metadata: Metadata = {
   title: "ikigai : agence SEO à Besançon - Stratégie de référencement naturel",
@@ -27,11 +42,18 @@ export const metadata: Metadata = {
     canonical: "https://ikigaifreelance.com/agence-seo" 
   },
   openGraph: {
+    images:'/twittercard-100.jpg',
     type: "website",
     url: "https://ikigaifreelance.com/agence-seo",
     title: "ikigai : agence SEO à Besançon - Stratégie de référencement naturel",
     description: "Agence SEO à Besançon, nous aidons les entreprises et les indépendants à se rendre visible sur Google grâce à une bonne stratégie de référencement naturel.",
     siteName: "ikigai : Agence web à Besançon - Création de site internet",
+  },
+  twitter: {
+    card: "summary_large_image", 
+    site: "https://ikigaifreelance.com", 
+    creator: "Agence ikigai", 
+    images: "/twittercard-100.jpg"
   },
   robots: { index: true, follow: true }
 };
@@ -40,6 +62,10 @@ export default function Page() {
 
   return (
     <main id={styles.main}>
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       <Section id={styles.herosection} className="herosectionclass">
         <H1>Agence SEO à Besançon</H1>
         <P id={styles.heroquote}>Nous vous rendons visible <br></br>sur Internet</P>
@@ -51,17 +77,17 @@ export default function Page() {
         <P id={styles.presentationparagraph}>ikigai est une agence SEO spécialiste dans le référencement naturel, la création de site web ainsi que dans la formation dans le but d&apos;aider à booster le marketing digital des entreprises et des indépendants.</P>
         <Div id={styles.expertiseslider}>
           <Div id={styles.expertises}>
-            <Link target='_blank' href='https://www.redacteur.com/blog/les-10-regles-dor-de-la-redaction-web/' title='Rédaction web & SEO' className={styles.expertise} rel="nofollow external">
+            <Link rel="external nofollow noopener noreferrer" target='_blank' href='https://www.redacteur.com/blog/les-10-regles-dor-de-la-redaction-web/' title='Rédaction web & SEO' className={styles.expertise}>
               <Image src='/redaction-seo.png' width={128} height={128} alt="Crayon pour rédaction SEO" title="Crayon pour rédaction SEO"/>
               <H3>Rédaction web & SEO</H3>
               <P>L&apos;agence écrit chaque ligne de texte présent sur votre site afin de le référencer au mieux sur la requête Google correspondant à votre secteur d&apos;activité.</P>
             </Link>
-            <Link target='_blank' href='https://www.inboundvalue.com/blog/audit-technique-seo' title='Audit technique & optimisation' className={styles.expertise} rel="nofollow external">
+            <Link rel="external nofollow noopener noreferrer" target='_blank' href='https://www.inboundvalue.com/blog/audit-technique-seo' title='Audit technique & optimisation' className={styles.expertise}>
               <Image src='/audit-technique.png' width={128} height={128} alt="Clé à molette pour audit technique SEO" title="Clé à molette pour audit technique SEO"/>
               <H3>Audit technique & optimisation</H3>
               <P>Nous faisons un audit complet de votre site web afin de détecter quels problèmes de performance vous font vous rapprocher de la dernière place dans les résultats de recherche Goog​le.</P>
             </Link>
-            <Link target='_blank' href='https://semji.com/fr/guide/netlinking-le-guide-pour-maximiser-votre-seo/#:~:text=Le%20netlinking%2C%20aussi%20appel%C3%A9%20linking,sur%20les%20moteurs%20de%20recherches.' title='Stratégie de netlinking' className={styles.expertise} rel="nofollow external">
+            <Link rel="external nofollow noopener noreferrer" target='_blank' href='https://semji.com/fr/guide/netlinking-le-guide-pour-maximiser-votre-seo/#:~:text=Le%20netlinking%2C%20aussi%20appel%C3%A9%20linking,sur%20les%20moteurs%20de%20recherches.' title='Stratégie de netlinking' className={styles.expertise}>
               <Image src='/lien-externe.png' width={128} height={128} alt="Lien externe pour stratégie de backlinking" title="Lien externe pour stratégie de backlinking"/>
               <H3>Stratégie de netlinking</H3>
               <P>L&apos;expertise de l&apos;agence en terme de netlinking nous permet de travailler sur des stratégies en fournissant une réputation de qualité et efficace pour un business, peu importe le domaine d&apos;activité.</P>
@@ -117,7 +143,7 @@ export default function Page() {
                   <ListElement>Optimisation technique de site</ListElement>
                   <ListElement>Stratégie de netlinking et backlinks</ListElement>
                 </List>
-                <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Demande de devis référencement naturel" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
+                <LinkButton rel="external nofollow noopener noreferrer" target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Demande de devis référencement naturel" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
             </Div>
           </Div>
       </Section>

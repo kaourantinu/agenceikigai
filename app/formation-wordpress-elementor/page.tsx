@@ -12,6 +12,21 @@ import Span from "../components/Span";
 import H3 from "../components/H3";
 import H4 from "../components/H4";
 import LinkButton from "../components/LinkButton";
+import { LocalBusiness, WithContext } from 'schema-dts'
+ 
+const jsonLd: WithContext<LocalBusiness> = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "ikigai : Formation WordPress Elementor",
+  image: "https://ikigaifreelance.com/logo-ikigai-blanc.svg",
+  telephone: "07 61 41 30 61",
+  email: "contact@ikigaifreelance.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Besançon",
+    addressRegion: "Franche-Comté"
+  }
+}
 
 export const metadata: Metadata = {
     title: "Apprendre à créer un site internet - Formation WordPress/Elementor",
@@ -26,19 +41,30 @@ export const metadata: Metadata = {
         canonical: "https://ikigaifreelance.com/formation-wordpress-elementor" 
     },
     openGraph: {
+        images:'/twittercard-100.jpg',
         type: "website",
         url: "https://ikigaifreelance.com/formation-wordpress-elementor",
         title: "Apprendre à créer un site internet - Formation WordPress & Elementor",
         description: "Apprenez à créer un site web facilement grâce à une formation WordPress et Elementor de qualité : formation éligible CPF & Pôle Emploi !",
         siteName: "ikigai : Agence web à Besançon - Création de site internet",
     },
-    robots: { index: true, follow: true }
+    robots: { index: true, follow: true },
+    twitter: {
+        card: "summary_large_image", 
+        site: "https://ikigaifreelance.com", 
+        creator: "Agence ikigai", 
+        images: "/twittercard-100.jpg"
+      }
   };
 
 export default function Page(){
 
     return (
         <main id={styles.main}>
+            <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
             <Section id={styles.herosection} className="herosectionclass">
                 <H1>Formation WordPress & Elementor</H1>
                 <P id={styles.heroquote}>Nous vous formons à vous <br></br>rendre visible</P>
@@ -92,7 +118,7 @@ export default function Page(){
                         </Div>
                     </Div>
                     <P id={styles.financementtext}>Financement possible via le CPF (Compte Professionnel de Formation) ou Pôle Emploi pour les demandeurs d&apos;emploi ainsi que les salariés dans le cadre du plan de développement des compétences.</P>
-                    <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Informations formation" title="En savoir plus sur la formation" className="button orangebutton">Des questions ?</LinkButton>
+                    <LinkButton rel="external nofollow noopener noreferrer" target="_blank" href="mailto:contact@ikigaifreelance.com?subject=Informations formation" title="En savoir plus sur la formation" className="button orangebutton">Des questions ?</LinkButton>
                 </Div>
             </Section>
             <Section id={styles.vertuespresentationsection}>
@@ -144,23 +170,23 @@ export default function Page(){
                         <Image src='/logo-datadock.png' width={481} height={519} alt="Logo Certification Datadock, l'outil d'aide au référencement des organismes de formation" title="Logo Certification Datadock, l'outil d'aide au référencement des organismes de formation"/>
                         <Image src='/logo_moncompteformation.png' width={2647} height={1559} alt="Logo Mon Compte Formation" title="Logo Mon Compte Formation"/>
                         </Div>
-                        <LinkButton target="_blank" href="mailto:contact@ikigaifreelance.com" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
+                        <LinkButton rel="external nofollow noopener noreferrer" target="_blank" href="mailto:contact@ikigaifreelance.com" title="Demander un devis" className="button orangebutton">Demandez un devis</LinkButton>
                     </Div>
                 </Div>
             </Section>
             <Section id={styles.clientsection}>
                 <H2>Les organismes de formation qui ont confiance en notre formation.</H2>
                 <Div id={styles.logoorganisme}>
-                    <Link target="_blank" className={styles.linkimage} href='https://www.univ-fcomte.fr/' title="Université de Franche-Comté, organisme de formation" rel="external nofollow">
+                    <Link target="_blank" className={styles.linkimage} href='https://www.univ-fcomte.fr/' title="Université de Franche-Comté, organisme de formation" rel="external nofollow noopener noreferrer">
                         <Image src='/logo-universite-franche-comte.png' width={1200} height={330} alt="Logo de l'Université de Franche-Comté, organisme de formation" title="Logo de l'Université de Franche-Comté, organisme de formation"/>
                     </Link>
-                    <Link target="_blank" className={styles.linkimage} href='https://www.formagraph.com/' title="Formagraph Design, organisme de formation" rel="external nofollow">
+                    <Link target="_blank" className={styles.linkimage} href='https://www.formagraph.com/' title="Formagraph Design, organisme de formation" rel="external nofollow noopener noreferrer">
                         <Image src='/logo-formagraph-design.png' width={369} height={27} alt="Logo de Formagraph Design, organisme de formation" title="Logo de Formagraph Design, organisme de formation"/>
                     </Link>
-                    <Link target="_blank" className={styles.linkimage} href='https://senza-formations.com/' title="Senza Formation, organisme de formation" rel="external nofollow">
+                    <Link target="_blank" className={styles.linkimage} href='https://senza-formations.com/' title="Senza Formation, organisme de formation" rel="external nofollow noopener noreferrer">
                         <Image src='/logo-senza-formation.png' width={650} height={203} alt="Logo de Senza Formation, organisme de formation" title="Logo de Senza Formation, organisme de formation"/>
                     </Link>
-                    <Link target="_blank" className={styles.linkimage} href='https://axio-formation.com/' title="Axio Formation, organisme de formation" rel="external nofollow">
+                    <Link target="_blank" className={styles.linkimage} href='https://axio-formation.com/' title="Axio Formation, organisme de formation" rel="external nofollow noopener noreferrer">
                         <Image src='/logo-axio-formation.png' width={601} height={275} alt="Logo d'Axio Formation, organisme de formation" title="Logo d'Axio Formation, organisme de formation"/>
                     </Link> 
                 </Div>
